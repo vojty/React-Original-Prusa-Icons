@@ -19,8 +19,7 @@
     "jsx": "react",
     "suppressImplicitAnyIndexErrors": true,
     "declarationDir": "dist",
-    "declaration": true,
-    "noEmit": true
+    "declaration": true
   },
   "include": [
     "src/lib/**/*"
