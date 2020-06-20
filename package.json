@@ -51,8 +51,7 @@
     "eject": "react-scripts eject",
     "deploy:types": "tsc --emitDeclarationOnly",
     "deploy:js": "rollup -c",
-    "deploy": "npm run deploy:types && npm run deploy:js",
-    "deploy:pages": "gh-pages -d build -f"
+    "deploy": "npm run deploy:types && npm run deploy:js"
   },
   "eslintConfig": {
     "extends": "react-app"
