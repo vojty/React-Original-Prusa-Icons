@@ -17,9 +17,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
-    "suppressImplicitAnyIndexErrors": true,
-    "declarationDir": "dist",
-    "declaration": true
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": [
     "src/lib/**/*"

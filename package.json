@@ -1,7 +1,7 @@
 {
   "name": "react-original-prusa-icons",
   "homepage": "http://michalxfanta.github.io/react-original-prusa-icons",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -48,7 +48,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:types": "tsc --emitDeclarationOnly",
+    "deploy:types": "tsc --emitDeclarationOnly --declaration true --declarationDir dist --declarationMap true",
     "deploy:js": "rollup -c",
     "deploy": "npm run deploy:types && npm run deploy:js"
   },
