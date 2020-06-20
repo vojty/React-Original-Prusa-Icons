@@ -52,7 +52,7 @@
     "deploy:types": "tsc --emitDeclarationOnly",
     "deploy:js": "rollup -c",
     "deploy": "npm run deploy:types && npm run deploy:js",
-    "deploy:pages": "gh-pages -d build"
+    "deploy:pages": "gh-pages -d build -f"
   },
   "eslintConfig": {
     "extends": "react-app"
