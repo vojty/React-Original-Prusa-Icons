@@ -1,8 +1,9 @@
 import {
-  OriginalPrusaConnectFavicon,
-  OriginalPrusaIconsFavicon
+  OriginalPrusaIconsFavicon,
+  PrusaConnectFavicon
 } from './lib'
 
+import { Link } from 'react-router-dom'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -13,10 +14,19 @@ const Div = styled.div`
 `
 
 function App() {
+
+  console.log(PrusaConnectFavicon.defaultProps.width)
+  
   return (
     <Div>
-      <OriginalPrusaConnectFavicon />
-      <OriginalPrusaIconsFavicon />
+      <h1>Icons</h1>
+      <Link to={`/icon/${PrusaConnectFavicon.defaultProps.componentName}/${PrusaConnectFavicon.defaultProps.folder}`}>
+        <PrusaConnectFavicon />
+      </Link>
+      
+      <Link to={`/icon/${OriginalPrusaIconsFavicon.defaultProps.componentName}/${OriginalPrusaIconsFavicon.defaultProps.folder}`}>
+        <OriginalPrusaIconsFavicon />
+      </Link>
     </Div>
   )
 }

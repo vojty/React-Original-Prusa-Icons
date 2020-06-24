@@ -25,14 +25,20 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/downloadjs": "^1.4.2",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.47",
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
+    "downloadjs": "^1.4.7",
     "gh-pages": "^2.2.0",
+    "jszip": "^3.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "rollup": "^2.17.1",
     "rollup-plugin-babel": "^4.4.0",
@@ -50,7 +56,10 @@
     "eject": "react-scripts eject",
     "deploy:types": "tsc --emitDeclarationOnly --declaration true --declarationDir dist --declarationMap true",
     "deploy:js": "rollup -c",
-    "deploy": "npm run deploy:types && npm run deploy:js"
+    "deploy": "npm run deploy:types && npm run deploy:js",
+    "svg": "npm run svg:favicons && npm run svg:icons",
+    "svg:favicons": "svgo -f ./src/svg/favicons",
+    "svg:icons": "svgo -f ./src/svg/icons"
   },
   "eslintConfig": {
     "extends": "react-app"
