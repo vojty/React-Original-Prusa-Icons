@@ -1,6 +1,8 @@
+import { Button, ButtonGroup, Form } from 'react-bootstrap'
 import React, { Suspense, useRef, useState } from 'react'
 
 import JSZip from 'jszip'
+import { Sizes } from './config'
 import Spinner from './components/helpers/spinner'
 import download from 'downloadjs'
 import { useParams } from 'react-router-dom'
@@ -8,6 +10,7 @@ import { useParams } from 'react-router-dom'
 const Icon: React.FC<{}> = (props) => {
     const [width, setWidth] = useState<number>(64)
     const [height, setHeight] = useState<number>(64)
+    const [size, setSize] = useState<number>(48)
 
     const { folder, componentName } = useParams()
     const IconCompoment = React.lazy(() => import(`./lib${folder ? ('/' + folder) : ''}/${componentName}`))
@@ -35,7 +38,7 @@ const Icon: React.FC<{}> = (props) => {
 
             const png = canvas.toDataURL('image/png', 1)
             const baseStringPng = getBase64String(png)
-            zip.file(CapitalizeToDash(componentName) + '.png', baseStringPng, { base64: true })
+            zip.file(CapitalizeToDash(componentName) + '-' + size + 'px.png', baseStringPng, { base64: true })
 
             zip.file(CapitalizeToDash(componentName) + '.svg', blob)
 
@@ -74,7 +77,7 @@ const Icon: React.FC<{}> = (props) => {
             const context = canvas.getContext('2d')
             context.drawImage(image, 0, 0, width, height)
 
-            download(canvas.toDataURL('image/png', 1), CapitalizeToDash(componentName) + '.png', 'image/png')
+            download(canvas.toDataURL('image/png', 1), CapitalizeToDash(componentName) + '-' + size + 'px.png', 'image/png')
         }
 
     }
@@ -83,6 +86,13 @@ const Icon: React.FC<{}> = (props) => {
         .replace(/(^[A-Z])/, ([first]) => first.toLowerCase())
         .replace(/([A-Z])/g, ([letter]) => `-${letter.toLowerCase()}`)
 
+
+    const sizePreset = (size: number): void => {
+        setWidth(size)
+        setHeight(size)
+        setSize(size)
+    }
+
     return (
         <div>
             <h1>Icon</h1>
@@ -90,10 +100,22 @@ const Icon: React.FC<{}> = (props) => {
                 <div ref={iconRef}>
                     <IconCompoment width={width} height={height} />
                 </div>
-                <button onClick={() => downloadSvg()}>svg</button>
-                <button onClick={() => downloadPng()}>png</button>
-                <button onClick={() => downloadZip()}>zip</button>
+                <Button onClick={() => downloadSvg()}>svg</Button>
+                <Button onClick={() => downloadPng()}>png</Button>
+                <Button onClick={() => downloadZip()}>zip</Button>
             </Suspense>
+
+            <Form>
+                    <ButtonGroup size="sm">
+                        {Sizes.map((item, i) => {
+                            return (
+                                <Button key={i} variant={(size === item) ? 'dark' : 'outline-dark'} onClick={() => sizePreset(item)}>{item.toString()}</Button>
+                            )
+                        })}
+                    </ButtonGroup>
+            </Form>
+            <span>{size}</span>
+
         </div>
     )
 }
