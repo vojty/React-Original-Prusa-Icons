@@ -1,5 +1,6 @@
-import * as serviceWorker from './serviceWorker'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+import * as serviceWorker from './serviceWorker'
 
 import {
   Route,
@@ -8,7 +9,7 @@ import {
 } from 'react-router-dom'
 
 import App from './App';
-import Icon from './Icon'
+import IconDetail from './iconDetail'
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -20,7 +21,7 @@ ReactDOM.render(
         <Route exact path="/">
           <App />
         </Route>
-        <Route path={`/icon/:componentName/:folder?`} render={routeProps => <Icon {...routeProps} />} />
+        <Route path={`/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
       </Switch>
     </Router>
   </React.StrictMode>,

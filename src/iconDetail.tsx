@@ -1,19 +1,26 @@
-import { Button, ButtonGroup, Form } from 'react-bootstrap'
-import React, { Suspense, useRef, useState } from 'react'
+import { Badge, Button, ButtonGroup, Form } from 'react-bootstrap'
+import { DefaultSize, Sizes, Tags } from './config'
+import React, { ComponentType, Suspense, useEffect, useRef, useState } from 'react'
 
+import Icon from './interfaces/Icon'
 import JSZip from 'jszip'
-import { Sizes } from './config'
 import Spinner from './components/helpers/spinner'
 import download from 'downloadjs'
 import { useParams } from 'react-router-dom'
 
-const Icon: React.FC<{}> = (props) => {
-    const [width, setWidth] = useState<number>(64)
-    const [height, setHeight] = useState<number>(64)
-    const [size, setSize] = useState<number>(48)
+const IconDetail: React.FC<{}> = (props) => {
+
+    const [name, setName] = useState<string>('')
+    const [description, setDescription] = useState<string>('')
+    const [tags, setTags] = useState<Tags>([])
+
+    const [width, setWidth] = useState<number>(DefaultSize)
+    const [height, setHeight] = useState<number>(DefaultSize)
+
+    const [size, setSize] = useState<number>(DefaultSize)
 
     const { folder, componentName } = useParams()
-    const IconCompoment = React.lazy(() => import(`./lib${folder ? ('/' + folder) : ''}/${componentName}`))
+    const IconCompoment = React.lazy<ComponentType<Icon>>(() => import(`./lib${folder ? ('/' + folder) : ''}/${componentName}`))
 
     const iconRef = useRef<HTMLDivElement>(null)
 
@@ -93,9 +100,24 @@ const Icon: React.FC<{}> = (props) => {
         setSize(size)
     }
 
+    useEffect(() => {
+        setName(IconCompoment._result.defaultProps.name)
+        setDescription(IconCompoment._result.defaultProps.description)
+        setTags(IconCompoment._result.defaultProps.tags)
+    }, [IconCompoment])
+
     return (
         <div>
             <h1>Icon</h1>
+            <div>{name}</div>
+            <div>{description}</div>
+            <div>
+                {tags.map((tag, i) => {
+                    return (
+                        <Badge key={i}>{tag}</Badge>
+                    )
+                })}
+            </div>
             <Suspense fallback={<Spinner />}>
                 <div ref={iconRef}>
                     <IconCompoment width={width} height={height} />
@@ -106,18 +128,18 @@ const Icon: React.FC<{}> = (props) => {
             </Suspense>
 
             <Form>
-                    <ButtonGroup size="sm">
-                        {Sizes.map((item, i) => {
-                            return (
-                                <Button key={i} variant={(size === item) ? 'dark' : 'outline-dark'} onClick={() => sizePreset(item)}>{item.toString()}</Button>
-                            )
-                        })}
-                    </ButtonGroup>
+                <ButtonGroup size="sm">
+                    {Sizes.map((item, i) => {
+                        return (
+                            <Button key={i} variant={(size === item) ? 'dark' : 'outline-dark'} onClick={() => sizePreset(item)}>{item.toString()}</Button>
+                        )
+                    })}
+                </ButtonGroup>
             </Form>
-            <span>{size}</span>
+            <span></span>
 
         </div>
     )
 }
 
-export default Icon
+export default IconDetail

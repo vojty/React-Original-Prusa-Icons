@@ -1,21 +1,12 @@
-import { Color, Tag, Tags } from '../../config'
+import { Color, Folder, Tag } from '../../config'
 
+import IconDetail from '../../interfaces/Icon'
 import React from 'react'
 
-interface IProps {
-    width?: number,
-    height?: number,
+interface IProps extends IconDetail {
     fgColor?: string,
     shadowColor?: string,
-    bgColor?: string,
-
-    name?: string,
-    description?: string,
-    tags: Tags,
-
-    componentName?: string,
-    folder?: string,
-    fileName?: string
+    bgColor?: string
 }
 
 const OriginalPrusaIconsFavicon = (props: IProps) => {
@@ -33,16 +24,17 @@ const OriginalPrusaIconsFavicon = (props: IProps) => {
 export default OriginalPrusaIconsFavicon
 
 OriginalPrusaIconsFavicon.defaultProps = {
-    width: 48,
-    height: 48,
-    fgColor: Color.WHITE,
-    shadowColor: Color.SHADOW,
-    bgColor: Color.ORANGE,
-
     name: 'Original Prusa Icons favicon',
+    componentName: OriginalPrusaIconsFavicon.name,
     description: 'The favicon for ORIGINAL PRUSA ICONS library.',
     tags: [Tag.ICONS, Tag.FAVICON],
 
-    componentName: 'OriginalPrusaIconsFavicon',
-    folder: 'favicons'
+    folder: Folder.FAVICONS,
+
+    width: 48,
+    height: 48,
+
+    fgColor: Color.WHITE,
+    shadowColor: Color.SHADOW,
+    bgColor: Color.ORANGE
 }
