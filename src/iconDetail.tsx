@@ -1,5 +1,5 @@
 import { Badge, Button, ButtonGroup, Form } from 'react-bootstrap'
-import { DefaultSize, Sizes, Tags } from './config'
+import { DefaultColorMode, DefaultSize, Sizes, Tags } from './config'
 import React, { ComponentType, Suspense, useEffect, useRef, useState } from 'react'
 
 import Icon from './interfaces/Icon'
@@ -16,6 +16,8 @@ const IconDetail: React.FC<{}> = (props) => {
 
     const [width, setWidth] = useState<number>(DefaultSize)
     const [height, setHeight] = useState<number>(DefaultSize)
+
+    const [colorMode, setColorMode] = useState<number>(DefaultColorMode)
 
     const [size, setSize] = useState<number>(DefaultSize)
 
@@ -86,7 +88,6 @@ const IconDetail: React.FC<{}> = (props) => {
 
             download(canvas.toDataURL('image/png', 1), CapitalizeToDash(componentName) + '-' + size + 'px.png', 'image/png')
         }
-
     }
 
     const CapitalizeToDash = (text: string): string => text
@@ -94,7 +95,7 @@ const IconDetail: React.FC<{}> = (props) => {
         .replace(/([A-Z])/g, ([letter]) => `-${letter.toLowerCase()}`)
 
 
-    const sizePreset = (size: number): void => {
+    const setDimensions = (size: number): void => {
         setWidth(size)
         setHeight(size)
         setSize(size)
@@ -131,7 +132,7 @@ const IconDetail: React.FC<{}> = (props) => {
                 <ButtonGroup size="sm">
                     {Sizes.map((item, i) => {
                         return (
-                            <Button key={i} variant={(size === item) ? 'dark' : 'outline-dark'} onClick={() => sizePreset(item)}>{item.toString()}</Button>
+                            <Button key={i} variant={(size === item) ? 'dark' : 'outline-dark'} onClick={() => setDimensions(item)}>{item.toString()}</Button>
                         )
                     })}
                 </ButtonGroup>

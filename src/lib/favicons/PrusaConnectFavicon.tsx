@@ -1,4 +1,4 @@
-import { Color, Folder, Tag } from '../../config'
+import { Color, ColorMode, Folder, Tag } from '../../config'
 
 import IconDetail from '../../interfaces/Icon'
 import React from 'react'
@@ -31,6 +31,8 @@ PrusaConnectFavicon.defaultProps = {
 
     width: 48,
     height: 48,
+
+    colorMode: ColorMode.LIGHT,
 
     fgColor: Color.WHITE,
     shadowColor: Color.SHADOW,

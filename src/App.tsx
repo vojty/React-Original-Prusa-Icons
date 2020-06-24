@@ -15,8 +15,6 @@ const Div = styled.div`
 
 function App() {
 
-  console.log(PrusaConnectFavicon.defaultProps.width)
-  
   return (
     <Div>
       <h1>Icons</h1>

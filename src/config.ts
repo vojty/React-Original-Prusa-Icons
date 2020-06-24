@@ -14,8 +14,11 @@ export enum ColorMode {
     LIGHT,
     DARK,
     GRAYSCALE,
-    MONOCHROME
+    MONOCHROME,
+    CUSTOM
 }
+
+export const DefaultColorMode: ColorMode = ColorMode.LIGHT
 
 export enum Folder {
     ICONS = 'icons',
