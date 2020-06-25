@@ -4,18 +4,18 @@ export const DefaultSize: number = 48
 
 export enum Color {
     WHITE = '#ffffff',
-    BLACK = '#ec691f',
+    BLACK = '#000000',
     ORANGE = '#fa6831',
-    SHADOW = '#2b2a29'
+    SHADOW = '#2b2a29',
+    GRAY = '#959595'
 }
 
 export enum ColorMode {
-    NONE,
+    CUSTOM,
     LIGHT,
     DARK,
     GRAYSCALE,
-    MONOCHROME,
-    CUSTOM
+    MONOCHROME
 }
 
 export const DefaultColorMode: ColorMode = ColorMode.LIGHT

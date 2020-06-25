@@ -1,7 +1,2 @@
-import OriginalPrusaIconsFavicon from './favicons/OriginalPrusaIconsFavicon'
-import PrusaConnectFavicon from './favicons/PrusaConnectFavicon'
-
-export { 
-    PrusaConnectFavicon,
-    OriginalPrusaIconsFavicon
-}
+export {default as OriginalPrusaIconsFavicon} from './favicons/OriginalPrusaIconsFavicon'
+export { default as PrusaConnectFavicon } from './favicons/PrusaConnectFavicon'

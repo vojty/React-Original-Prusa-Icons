@@ -1,0 +1,1 @@
+{files: [split("\n")[] | {file: .} ]}

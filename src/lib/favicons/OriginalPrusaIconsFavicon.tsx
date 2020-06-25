@@ -1,21 +1,57 @@
 import { Color, ColorMode, Folder, Tag } from '../../config'
+import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
-import React from 'react'
 
 interface IProps extends IconDetail {
-    fgColor?: string,
-    shadowColor?: string,
-    bgColor?: string
+    fgColor?: Color,
+    shadowColor?: Color,
+    bgColor?: Color
 }
 
 const OriginalPrusaIconsFavicon = (props: IProps) => {
+
+    const [fgColor, setFgColor] = useState<Color | string | undefined>(props.fgColor)
+    const [shadowColor, setShadowColor] = useState<Color | string | undefined>(props.shadowColor)
+    const [bgColor, setBgColor] = useState<Color | string | undefined>(props.bgColor)
+
+
+    useEffect(() => {
+        switch (props.colorMode) {
+            case ColorMode.CUSTOM:
+                setFgColor(props.fgColor)
+                setShadowColor(props.shadowColor)
+                setBgColor(props.bgColor)
+                break
+            case ColorMode.LIGHT:
+                setFgColor(Color.WHITE)
+                setShadowColor(Color.SHADOW)
+                setBgColor(Color.ORANGE)
+                break
+            case ColorMode.DARK:
+                setFgColor(Color.WHITE)
+                setShadowColor(Color.SHADOW)
+                setBgColor(Color.ORANGE)
+                break
+            case ColorMode.GRAYSCALE:
+                setFgColor(Color.WHITE)
+                setShadowColor(Color.SHADOW)
+                setBgColor(Color.GRAY)
+                break
+            case ColorMode.MONOCHROME:
+                setFgColor(Color.WHITE)
+                setShadowColor(Color.BLACK)
+                setBgColor(Color.BLACK)
+                break
+        }
+    }, [props.colorMode])
+
     return (
         <svg id="svg" xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 62.38 62.38" fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
-            <path fill={props.bgColor} d="M0 0h62.38v62.38H0z" />
+            <path fill={bgColor} d="M0 0h62.38v62.38H0z" />
             <g fillRule="nonzero">
-                <path fill={props.shadowColor} d="M27.29 52.95h10.37V13.12H27.29z" />
-                <path fill={props.fgColor} d="M25.44 51.1h10.38V11.27H25.44z" />
+                <path fill={shadowColor} d="M27.29 52.95h10.37V13.12H27.29z" />
+                <path fill={fgColor} d="M25.44 51.1h10.38V11.27H25.44z" />
             </g>
         </svg>
     )

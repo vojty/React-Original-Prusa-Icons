@@ -35,6 +35,7 @@
     "downloadjs": "^1.4.7",
     "gh-pages": "^2.2.0",
     "jszip": "^3.5.0",
+    "list-files-in-dir": "^0.1.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.13.1",
@@ -61,7 +62,13 @@
     "deploy": "npm run deploy:types && npm run deploy:js",
     "svg": "npm run svg:favicons && npm run svg:icons",
     "svg:favicons": "svgo -f ./src/svg/favicons",
-    "svg:icons": "svgo -f ./src/svg/icons"
+    "svg:icons": "svgo -f ./src/svg/icons",
+    "scan:favicons": "dir src\\lib\\favicons\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\favicons.json",
+    "scan:icons": "dir src\\lib\\icons\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\icons.json",
+    "scan:logos": "dir src\\lib\\logos\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\logos.json",
+    "scan:spinners": "dir src\\lib\\spinners\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\spinners.json",
+    "scan:misc": "dir src\\lib\\misc\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\misc.json",
+    "scan": "npm run scan:favicons && npm run scan:icons && npm run scan:logos && npm run scan:spinners && npm run scan:misc"
   },
   "eslintConfig": {
     "extends": "react-app"
