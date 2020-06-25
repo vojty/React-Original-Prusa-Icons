@@ -24,4 +24,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-componentsList.txt
+/src/lib/favicons.json
+/src/lib/icons.json
+/src/lib/logos.json
+/src/lib/spinners.json
+/src/lib/misc.json
