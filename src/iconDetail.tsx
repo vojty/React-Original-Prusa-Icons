@@ -17,7 +17,7 @@ const IconDetail: React.FC<{}> = (props) => {
     const [width, setWidth] = useState<number>(DefaultSize)
     const [height, setHeight] = useState<number>(DefaultSize)
 
-    const [colorMode, setColorMode] = useState<number>(DefaultColorMode)
+    const [colorMode, setColorMode] = useState<number>(DefaultColorMode) // eslint-disable-line
 
     const [size, setSize] = useState<number>(DefaultSize)
 
@@ -105,7 +105,7 @@ const IconDetail: React.FC<{}> = (props) => {
         setName(IconCompoment._result.defaultProps.name)
         setDescription(IconCompoment._result.defaultProps.description)
         setTags(IconCompoment._result.defaultProps.tags)
-    }, [IconCompoment])
+    }, [IconCompoment]) // eslint-disable-line
 
     return (
         <div>

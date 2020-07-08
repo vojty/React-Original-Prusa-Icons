@@ -1,0 +1,106 @@
+a {
+  color: #fa6831 !important;
+}
+
+.flex-even {
+  flex: 1;
+}
+
+section {
+  margin-top: 10px;
+}
+
+#mainmenu {
+  border-bottom: 1px solid #e0e0e0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.nav-link {
+  font-family: "Atlas Grotesk Web Bold";
+  font-size: 15px;
+  color: #2a2a2a !important;
+}
+
+.nav-link.disabled {
+  color: #a0a0a0 !important;
+}
+
+.nav-link:hover {
+  color: #fa6831 !important;
+}
+
+#mainmenu .nav-link {
+  color: black !important;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 3.5em;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 1em !important;
+  margin-left: 1em !important;
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+
+#mainmenu .nav-link.active, #mainmenu .nav-item.active .nav-link {
+  color: #2a2a2a !important;
+  border-bottom-color: #2a2a2a;
+}
+
+#mainmenu .nav-link:hover {
+  border-bottom-color: #fa6831;
+}
+
+#mainmenu .nav-link.no-line, #mainmenu .nav-link.active.no-line, #mainmenu .nav-link.no-line:hover {
+  border-bottom: 1px solid transparent;
+}
+
+#mainmenu .nav-link.bordered span {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+#mainmenu .nav-link.bordered:hover span {
+  border-color: #fa6831;
+}
+
+#mainmenu .navbar-brand {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  flex-grow: 0;
+}
+
+#mainmenu .logo {
+  height: 35px;
+  pointer-events: none;
+}
+
+#mainmenu .profile {
+  height: 50px;
+  border-radius: 50%;
+}
+
+#mainmenu .dropdown-menu {
+  border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 1px;
+  border-top: none;
+}
+
+#mainmenu .dropdown-item {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: black !important;
+}
+
+#mainmenu .dropdown-item:hover, #mainmenu .dropdown-item.active {
+  background-color: #fa6831;
+}
+
+.container-full {
+  padding: 0 !important;
+}

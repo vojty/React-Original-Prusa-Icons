@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Atlas Grotesk Web Black Italic";
+    src: url(../fonts/AtlasGrotesk-BlackItalic-Web.eot);
+    src: url(../fonts/AtlasGrotesk-BlackItalic-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-BlackItalic-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-BlackItalic-Web.woff) format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Black";
+    src: url(../fonts/AtlasGrotesk-Black-Web.eot);
+    src: url(../fonts/AtlasGrotesk-Black-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-Black-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-Black-Web.woff) format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Bold Italic";
+    src: url(../fonts/AtlasGrotesk-BoldItalic-Web.eot);
+    src: url(../fonts/AtlasGrotesk-BoldItalic-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-BoldItalic-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-BoldItalic-Web.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Bold";
+    src: url(../fonts/AtlasGrotesk-Bold-Web.eot);
+    src: url(../fonts/AtlasGrotesk-Bold-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-Bold-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-Bold-Web.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Medium Italic";
+    src: url(../fonts/AtlasGrotesk-MediumItalic-Web.eot);
+    src: url(../fonts/AtlasGrotesk-MediumItalic-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-MediumItalic-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-MediumItalic-Web.woff) format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Medium";
+    src: url(../fonts/AtlasGrotesk-Medium-Web.eot);
+    src: url(../fonts/AtlasGrotesk-Medium-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-Medium-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-Medium-Web.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Regular Italic";
+    src: url(../fonts/AtlasGrotesk-RegularItalic-Web.eot);
+    src: url(../fonts/AtlasGrotesk-RegularItalic-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-RegularItalic-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-RegularItalic-Web.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Regular";
+    src: url(../fonts/AtlasGrotesk-Regular-Web.eot);
+    src: url(../fonts/AtlasGrotesk-Regular-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-Regular-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-Regular-Web.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Light Italic";
+    src: url(../fonts/AtlasGrotesk-LightItalic-Web.eot);
+    src: url(../fonts/AtlasGrotesk-LightItalic-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-LightItalic-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-LightItalic-Web.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Light";
+    src: url(../fonts/AtlasGrotesk-Light-Web.eot);
+    src: url(../fonts/AtlasGrotesk-Light-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-Light-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-Light-Web.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Thin Italic";
+    src: url(../fonts/AtlasGrotesk-ThinItalic-Web.eot);
+    src: url(../fonts/AtlasGrotesk-ThinItalic-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-ThinItalic-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-ThinItalic-Web.woff) format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web Thin";
+    src: url(../fonts/AtlasGrotesk-Thin-Web.eot);
+    src: url(../fonts/AtlasGrotesk-Thin-Web.eot?#iefix) format("embedded-opentype"), url(../fonts/AtlasGrotesk-Thin-Web.woff2) format("woff2"), url(../fonts/AtlasGrotesk-Thin-Web.woff) format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal
+}
