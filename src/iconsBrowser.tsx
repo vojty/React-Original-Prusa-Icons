@@ -13,6 +13,8 @@ const IconsContainer = styled(Container)`
     border-top: solid 1px #e0e0e0;
 `
 
+// SEARCH FILTER - Icons.filter(item => item.name && item.name.includes('Nozzle'))
+
 const IconsBrowser: React.FC<{}> = () => {
     return (
         <IconsContainer fluid>
