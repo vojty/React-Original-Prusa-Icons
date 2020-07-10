@@ -1,4 +1,4 @@
-import { ColorMode, Folder, Tags } from '../config'
+import { Color, Folder, Tags, Theme } from '../config'
 
 export default interface Icon {
     name?: string,
@@ -11,5 +11,10 @@ export default interface Icon {
     
     folder?: Folder,
     
-    colorMode?: ColorMode
+    theme?: Theme,
+
+    withBackground?: boolean,
+    backgroundColor?: Color,
+    backgroundRounded?: boolean,
+    backgroundRadius?: number,
 }

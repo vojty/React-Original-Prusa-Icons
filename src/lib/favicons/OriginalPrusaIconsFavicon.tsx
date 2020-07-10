@@ -1,4 +1,4 @@
-import { Color, ColorMode, Folder, Tag } from '../../config'
+import { Color, Folder, Tag, Theme } from '../../config'
 import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
@@ -17,34 +17,34 @@ const OriginalPrusaIconsFavicon = (props: IProps) => {
 
 
     useEffect(() => {
-        switch (props.colorMode) {
-            case ColorMode.CUSTOM:
+        switch (props.theme) {
+            case Theme.CUSTOM:
                 setFgColor(props.fgColor)
                 setShadowColor(props.shadowColor)
                 setBgColor(props.bgColor)
                 break
-            case ColorMode.LIGHT:
+            case Theme.LIGHT:
                 setFgColor(Color.WHITE)
                 setShadowColor(Color.SHADOW)
                 setBgColor(Color.ORANGE)
                 break
-            case ColorMode.DARK:
+            case Theme.DARK:
                 setFgColor(Color.WHITE)
                 setShadowColor(Color.SHADOW)
                 setBgColor(Color.ORANGE)
                 break
-            case ColorMode.GRAYSCALE:
+            case Theme.GRAYSCALE:
                 setFgColor(Color.WHITE)
                 setShadowColor(Color.SHADOW)
                 setBgColor(Color.GRAY)
                 break
-            case ColorMode.MONOCHROME:
+            case Theme.MONOCHROME:
                 setFgColor(Color.WHITE)
                 setShadowColor(Color.BLACK)
                 setBgColor(Color.BLACK)
                 break
         }
-    }, [props.colorMode]) // eslint-disable-line
+    }, [props.theme]) // eslint-disable-line
 
     return (
         <svg id="svg" xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 62.38 62.38" fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
@@ -70,7 +70,7 @@ OriginalPrusaIconsFavicon.defaultProps = {
     width: 48,
     height: 48,
 
-    colorMode: ColorMode.LIGHT,
+    Theme: Theme.LIGHT,
 
     fgColor: Color.WHITE,
     shadowColor: Color.SHADOW,

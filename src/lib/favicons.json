@@ -1,10 +1,22 @@
 {
   "files": [
     {
-      "file": "OriginalPrusaIconsFavicon.tsx"
+      "file": "OriginalPrusaIconsFavicon.tsx",
+      "name": "Original Prusa Icons favicon",
+      "description": "The favicon for ORIGINAL PRUSA ICONS library.",
+      "tags": [
+        "ICONS",
+        "FAVICON"
+      ]
     },
     {
-      "file": "PrusaConnectFavicon.tsx"
+      "file": "PrusaConnectFavicon.tsx",
+      "name": "Prusa Connect favicon",
+      "description": "The favicon for PRUSA CONNECT project.",
+      "tags": [
+        "CONNECT",
+        "FAVICON"
+      ]
     },
     {
       "file": ""

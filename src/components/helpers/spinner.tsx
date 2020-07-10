@@ -1,14 +1,14 @@
 import styled, { keyframes } from 'styled-components'
 
-import { ColorMode } from '../../config'
 import React from 'react'
+import { Theme } from '../../config'
 
 interface IProps {
     size?: string,
     borderColor?: string,
     backgroundColor?: string,
     innerColor?: string,
-    colorMode?: ColorMode 
+    theme?: Theme
 }
 
 const rotate = keyframes`
@@ -70,5 +70,5 @@ Spinner.defaultProps = {
     borderColor: '#fa6831',
     backgroundColor: '#000000',
     innerColor: '#000000',
-    colorMode: ColorMode.LIGHT
+    theme: Theme.LIGHT
 }

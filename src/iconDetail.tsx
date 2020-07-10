@@ -1,14 +1,49 @@
-import { Badge, Button, ButtonGroup, Form } from 'react-bootstrap'
-import { DefaultColorMode, DefaultSize, Sizes, Tags } from './config'
-import React, { ComponentType, Suspense, useEffect, useRef, useState } from 'react'
+import { Button, ButtonGroup, Form } from 'react-bootstrap'
+import { DefaultSize, Sizes, Tags, Theme } from './config'
+import React, { ComponentType, Suspense, useRef, useState } from 'react'
 
 import Icon from './interfaces/Icon'
 import JSZip from 'jszip'
 import Spinner from './components/helpers/spinner'
+import Tag from './components/helpers/tag'
+import bg from './img/bg.png';
 import download from 'downloadjs'
+import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 
-const IconDetail: React.FC<{}> = (props) => {
+const DetailContainer = styled.div`
+    margin: 4rem auto;
+    text-align: center;
+`
+
+const IconContainer = styled.div`
+    height: 256px;
+    width: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    background-image: url(${bg});
+    background-position: center center;
+    background-size: 16px 16px;
+
+    svg {
+        margin: auto;
+    }
+`
+
+const H1 = styled.h1`
+    font-family: 'Atlas Grotesk Thin';
+`
+
+const H2 = styled.h2`
+    font-family: 'Atlas Grotesk Black';
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+`
+
+const IconDetail: React.FC<{}> = () => {
 
     const [name, setName] = useState<string>('')
     const [description, setDescription] = useState<string>('')
@@ -17,15 +52,51 @@ const IconDetail: React.FC<{}> = (props) => {
     const [width, setWidth] = useState<number>(DefaultSize)
     const [height, setHeight] = useState<number>(DefaultSize)
 
-    const [colorMode, setColorMode] = useState<number>(DefaultColorMode) // eslint-disable-line
-
     const [size, setSize] = useState<number>(DefaultSize)
 
+    const [withBackground, setWithBackground] = useState<boolean>(true)
+    const [theme, setTheme] = useState<Theme>(Theme.LIGHT)
+
     const { folder, componentName } = useParams()
-    const IconCompoment = React.lazy<ComponentType<Icon>>(() => import(`./lib${folder ? ('/' + folder) : ''}/${componentName}`))
+    const IconCompoment = React.lazy<ComponentType<Icon>>(() => import(`./lib${folder ? ('/' + folder) : ''}/${componentName}`).then(component => {
+
+        setName(component.default.defaultProps.name)
+        setDescription(component.default.defaultProps.description)
+        setTags(component.default.defaultProps.tags)
+
+        return component
+    }))
 
     const iconRef = useRef<HTMLDivElement>(null)
 
+    const withBackgroundChange = (e: React.FormEvent<HTMLInputElement>) => {
+        setWithBackground(e.currentTarget.checked)
+    }
+
+    const setLightTheme = () => {
+        setTheme(Theme.LIGHT)
+    }
+
+    const setDarkTheme = () => {
+        setTheme(Theme.DARK)
+    }
+
+    const setWhiteTheme = () => {
+        setTheme(Theme.WHITE)
+    }
+
+    const setBlackTheme = () => {
+        setTheme(Theme.BLACK)
+    }
+
+    const setGrayscaleTheme = () => {
+        setTheme(Theme.GRAYSCALE)
+    }
+
+    const setMonochromeTheme = () => {
+        setTheme(Theme.MONOCHROME)
+    }
+    
     const downloadZip = () => {
         console.log('downloadZip')
         const zip = new JSZip()
@@ -94,52 +165,68 @@ const IconDetail: React.FC<{}> = (props) => {
         .replace(/(^[A-Z])/, ([first]) => first.toLowerCase())
         .replace(/([A-Z])/g, ([letter]) => `-${letter.toLowerCase()}`)
 
-
     const setDimensions = (size: number): void => {
         setWidth(size)
         setHeight(size)
         setSize(size)
     }
 
-    useEffect(() => {
-        setName(IconCompoment._result.defaultProps.name)
-        setDescription(IconCompoment._result.defaultProps.description)
-        setTags(IconCompoment._result.defaultProps.tags)
-    }, [IconCompoment]) // eslint-disable-line
-
     return (
-        <div>
-            <h1>Icon</h1>
-            <div>{name}</div>
+        <DetailContainer>
+            <H1>{name}</H1>
             <div>{description}</div>
             <div>
                 {tags.map((tag, i) => {
                     return (
-                        <Badge key={i}>{tag}</Badge>
+                        <Tag key={i} title={tag} />
                     )
                 })}
             </div>
             <Suspense fallback={<Spinner />}>
-                <div ref={iconRef}>
-                    <IconCompoment width={width} height={height} />
-                </div>
-                <Button onClick={() => downloadSvg()}>svg</Button>
-                <Button onClick={() => downloadPng()}>png</Button>
-                <Button onClick={() => downloadZip()}>zip</Button>
-            </Suspense>
+                <IconContainer ref={iconRef}>
+                    <IconCompoment width={width} height={height} withBackground={withBackground} theme={theme} />
+                </IconContainer>
 
-            <Form>
+                <H2>Theme</H2>
+                <Form>
+                    <Form.Group controlId="thm">
+                        <Form.Check checked={theme === Theme.LIGHT} onChange={setLightTheme} inline label="light" type="radio" id="light" />
+                        <Form.Check checked={theme === Theme.DARK} onChange={setDarkTheme} inline label="dark" type="radio" id="dark" />
+                        <Form.Check checked={theme === Theme.WHITE} onChange={setWhiteTheme} inline label="white" type="radio" id="white" />
+                        <Form.Check checked={theme === Theme.BLACK} onChange={setBlackTheme} inline label="black" type="radio" id="black" />
+                        <Form.Check checked={theme === Theme.GRAYSCALE} onChange={setGrayscaleTheme} inline label="grayscale" type="radio" id="grayscale" />
+                        <Form.Check checked={theme === Theme.MONOCHROME} onChange={setMonochromeTheme} inline label="monochrome" type="radio" id="monochrome" />
+                    </Form.Group>
+                </Form>
+
+                <H2>
+                    <Form.Group controlId="withBackground">
+                        <Form.Label>Background</Form.Label>
+                        <Form.Check checked={withBackground} onChange={withBackgroundChange} label={withBackground ? 'on' : 'off'} type="switch" />
+                    </Form.Group>
+                </H2>
+
+                <H2>Size</H2>
+
+                <Form>
+                    <ButtonGroup size="sm">
+                        {Sizes.map((item, i) => {
+                            return (
+                                <Button key={i} variant={(size === item) ? 'dark' : 'outline-dark'} onClick={() => setDimensions(item)}>{item.toString()}</Button>
+                            )
+                        })}
+                    </ButtonGroup>
+                </Form>
+
+                <H2>Download</H2>
+
                 <ButtonGroup size="sm">
-                    {Sizes.map((item, i) => {
-                        return (
-                            <Button key={i} variant={(size === item) ? 'dark' : 'outline-dark'} onClick={() => setDimensions(item)}>{item.toString()}</Button>
-                        )
-                    })}
+                    <Button onClick={() => downloadSvg()} variant="outline-dark">svg</Button>
+                    <Button onClick={() => downloadPng()} variant="outline-dark">png</Button>
+                    <Button onClick={() => downloadZip()} variant="outline-dark">zip</Button>
                 </ButtonGroup>
-            </Form>
-            <span></span>
-
-        </div>
+            </Suspense>
+        </DetailContainer>
     )
 }
 

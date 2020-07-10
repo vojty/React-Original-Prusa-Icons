@@ -1,31 +1,37 @@
 export const Sizes = [12, 16, 24, 32, 48, 64, 72, 96, 120, 240]
 
-export const DefaultSize: number = 48
+export const DefaultSize: number = 120
+
+export const DefaultRadiusRatio: number = 0.07
 
 export enum Color {
+    TRANSPARENT = 'none',
     WHITE = '#ffffff',
     BLACK = '#000000',
     ORANGE = '#fa6831',
     SHADOW = '#2b2a29',
-    GRAY = '#959595'
+    GRAY = '#5B5B5B',
+    DARK_GRAY = '#313131',
 }
 
-export enum ColorMode {
+export enum Theme {
     CUSTOM,
     LIGHT,
     DARK,
+    WHITE,
+    BLACK,
     GRAYSCALE,
-    MONOCHROME
+    MONOCHROME,
 }
 
-export const DefaultColorMode: ColorMode = ColorMode.LIGHT
+export const DefaultTheme: Theme = Theme.LIGHT
 
 export enum Folder {
     ICONS = 'icons',
     FAVICONS = 'favicons',
     LOGOS = 'logos',
-    SPINNERS = 'spinwers',
-    MISC = 'misc'
+    SPINNERS = 'spinners',
+    MISC = 'misc',
 }
 
 export const DefaultFolder: Folder = Folder.ICONS
@@ -43,6 +49,7 @@ export enum Tag {
     CONNECT = 'CONNECT',
     LOCAL = 'LOCAL',
     ICONS = 'ICONS',
-    FAVICON = 'FAVICON'
+    FAVICON = 'FAVICON',
 }
+
 export interface Tags extends Array<Tag> { }

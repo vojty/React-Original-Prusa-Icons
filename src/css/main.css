@@ -104,3 +104,8 @@ section {
 .container-full {
   padding: 0 !important;
 }
+
+.custom-control-input:checked~.custom-control-label::before {
+  background-color: #fa6831 !important;
+  border-color: #fa6831 !important;
+}

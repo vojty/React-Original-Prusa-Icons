@@ -1,3 +1,16 @@
 {
-  "files": []
+  "files": [
+    {
+      "file": "NozzleIcon.tsx",
+      "name": "Nozzle icon",
+      "description": "",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
+      "file": ""
+    }
+  ]
 }
