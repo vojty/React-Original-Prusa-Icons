@@ -3,7 +3,7 @@
     {
       "file": "NozzleIcon.tsx",
       "name": "Nozzle icon",
-      "description": "",
+      "description": "FDM or FFF nozzle whit extruded filament.",
       "tags": [
         "ICONS",
         "MINI"

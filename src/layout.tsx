@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/main.css'
 
+import React, { useState } from 'react'
 import {
     Route,
     BrowserRouter as Router,
@@ -10,18 +11,18 @@ import {
 import IconDetail from './iconDetail'
 import IconsBrowser from './iconsBrowser'
 import Menu from './components/menu'
-import React from 'react'
 
 const Layout: React.FC<{}> = () => {
-
+    const [searchTerm, setSearchTerm] = useState<string>('')
+    
     return (
         <Router>
             <div className="layout">
-                <Menu />
+                <Menu setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
                 <div className="content">
                     <Switch>
                         <Route exact path="/">
-                            <IconsBrowser />
+                            <IconsBrowser searchTerm={searchTerm} />
                         </Route>
                         <Route path={`/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
                     </Switch>

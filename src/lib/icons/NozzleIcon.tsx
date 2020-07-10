@@ -1,4 +1,4 @@
-import { Color, Folder, Tag, Theme, DefaultRadiusRatio} from '../../config'
+import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../../config'
 import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
@@ -66,7 +66,7 @@ export default NozzleIcon
 NozzleIcon.defaultProps = {
     name: 'Nozzle icon',
     componentName: 'NozzleIcon',
-    description: '',
+    description: 'FDM or FFF nozzle whit extruded filament.',
     tags: [Tag.ICONS, Tag.MINI],
 
     folder: Folder.ICONS,

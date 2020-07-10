@@ -13,14 +13,29 @@ const IconsContainer = styled(Container)`
     border-top: solid 1px #e0e0e0;
 `
 
-// SEARCH FILTER - Icons.filter(item => item.name && item.name.includes('Nozzle'))
+interface IProps {
+    searchTerm: string
+}
 
-const IconsBrowser: React.FC<{}> = () => {
+const IconsBrowser: React.FC<IProps> = (props) => {
+
+    const filter = (files: any) => {
+        if (props.searchTerm.length >= 2) {
+            return files.filter(item => (
+                item.name && item.name.toLowerCase().includes(props.searchTerm.toLowerCase())
+            ) || (
+                    item.description && item.description.toLowerCase().includes(props.searchTerm.toLowerCase())
+                ))
+        } else {
+            return files
+        }
+    }
+
     return (
         <IconsContainer fluid>
             <Row noGutters={true}>
-                <IconBrowserItem files={Icons} folder={Folder.ICONS} />
-                <IconBrowserItem files={Favicons} folder={Folder.FAVICONS} />
+                <IconBrowserItem files={filter(Icons)} folder={Folder.ICONS} />
+                <IconBrowserItem files={filter(Favicons)} folder={Folder.FAVICONS} />
             </Row>
         </IconsContainer>
     )
