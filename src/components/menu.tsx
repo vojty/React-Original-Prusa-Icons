@@ -1,10 +1,16 @@
-import {Form, FormControl, Nav, Navbar} from 'react-bootstrap'
+import { Form, FormControl, Nav, Navbar } from 'react-bootstrap'
 
 import { LinkContainer } from 'react-router-bootstrap'
 import React from 'react'
 import home from '../img/home.svg'
 import logo from '../img/prusa-icons-set-logo.svg'
 import search from '../img/search.svg'
+import styled from 'styled-components'
+
+const LogoLink = styled(Nav.Link)`
+    margin-top: 0;
+    padding-top: 0;
+`
 
 interface IProps {
     searchTerm: string,
@@ -29,15 +35,15 @@ const Menu: React.FC<IProps> = (props) => {
     const searchTermChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         props.setSearchTerm(e.currentTarget.value)
     }
-    
+
     const menuItemsRight =
         <>
             <Form inline>
                 <img src={search} className="search" alt="Search" />
-                <FormControl value={props.searchTerm} onChange={searchTermChange}  type="text" placeholder="Search" className="ml-sm-2 mr-sm-2" />
+                <FormControl value={props.searchTerm} onChange={searchTermChange} type="text" placeholder="Search" className="ml-sm-2 mr-sm-2" />
             </Form>
         </>
-    
+
     return (
         <Navbar id="mainmenu" collapseOnSelect expand="lg" className="mb-auto">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -52,16 +58,16 @@ const Menu: React.FC<IProps> = (props) => {
                 </Nav>
                 <Navbar.Brand className="flex-even d-flex justify-content-center">
                     <LinkContainer to="/" >
-                        <Nav.Link className="no-line">
+                        <LogoLink className="no-line">
                             <img src={logo} className="logo" alt="Original Prusa Icons Set" />
-                        </Nav.Link>
+                        </LogoLink>
                     </LinkContainer>
                 </Navbar.Brand>
                 <Nav className="flex-even d-flex justify-content-end">
                     {menuItemsRight}
                 </Nav>
             </Navbar.Collapse>
-        </Navbar >
+        </Navbar>
     )
 }
 
