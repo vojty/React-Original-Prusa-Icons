@@ -190,12 +190,12 @@ const IconDetail: React.FC<{}> = () => {
                 <H2>Theme</H2>
                 <Form>
                     <Form.Group controlId="thm">
-                        <Form.Check checked={theme === Theme.LIGHT} onChange={setLightTheme} inline label="light" type="radio" id="light" />
-                        <Form.Check checked={theme === Theme.DARK} onChange={setDarkTheme} inline label="dark" type="radio" id="dark" />
-                        <Form.Check checked={theme === Theme.WHITE} onChange={setWhiteTheme} inline label="white" type="radio" id="white" />
-                        <Form.Check checked={theme === Theme.BLACK} onChange={setBlackTheme} inline label="black" type="radio" id="black" />
-                        <Form.Check checked={theme === Theme.GRAYSCALE} onChange={setGrayscaleTheme} inline label="grayscale" type="radio" id="grayscale" />
-                        <Form.Check checked={theme === Theme.MONOCHROME} onChange={setMonochromeTheme} inline label="monochrome" type="radio" id="monochrome" />
+                        <Form.Check checked={theme === Theme.LIGHT} onChange={setLightTheme} custom inline label="light" type="radio" id="light" />
+                        <Form.Check checked={theme === Theme.DARK} onChange={setDarkTheme} custom inline label="dark" type="radio" id="dark" />
+                        <Form.Check checked={theme === Theme.WHITE} onChange={setWhiteTheme} custom inline label="white" type="radio" id="white" />
+                        <Form.Check checked={theme === Theme.BLACK} onChange={setBlackTheme} custom inline label="black" type="radio" id="black" />
+                        <Form.Check checked={theme === Theme.GRAYSCALE} onChange={setGrayscaleTheme} custom inline label="grayscale" type="radio" id="grayscale" />
+                        <Form.Check checked={theme === Theme.MONOCHROME} onChange={setMonochromeTheme} custom inline label="monochrome" type="radio" id="monochrome" />
                     </Form.Group>
                 </Form>
 
