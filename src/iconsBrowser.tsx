@@ -25,7 +25,10 @@ const IconsBrowser: React.FC<IProps> = (props) => {
                 item.name && item.name.toLowerCase().includes(props.searchTerm.toLowerCase())
             ) || (
                     item.description && item.description.toLowerCase().includes(props.searchTerm.toLowerCase())
-                ))
+                ) || (
+                    item.tags && item.tags.includes(props.searchTerm.toUpperCase())
+                )
+            )
         } else {
             return files
         }
