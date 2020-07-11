@@ -6,7 +6,7 @@ import Icon from './interfaces/Icon'
 import JSZip from 'jszip'
 import Spinner from './components/helpers/spinner'
 import Tag from './components/helpers/tag'
-import bg from './img/bg.png';
+import bg from 'src/img/bg.png'
 import download from 'downloadjs'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'

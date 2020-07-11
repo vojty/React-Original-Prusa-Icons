@@ -66,7 +66,7 @@ export default NozzleIcon
 NozzleIcon.defaultProps = {
     name: 'Nozzle icon',
     componentName: 'NozzleIcon',
-    description: 'FDM or FFF nozzle whit extruded filament.',
+    description: 'FDM or FFF nozzle with extruded filament.',
     tags: [Tag.ICONS, Tag.MINI],
 
     folder: Folder.ICONS,
