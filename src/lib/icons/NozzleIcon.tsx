@@ -47,7 +47,7 @@ const NozzleIcon = (props: IProps) => {
             case Theme.MONOCHROME:
                 setPrimaryColor(Color.WHITE)
                 setSecondaryColor(Color.WHITE)
-                setBackgroundColor(Color.GRAY)
+                setBackgroundColor(Color.BLACK)
                 break
         }
     }, [props.theme]) // eslint-disable-line
