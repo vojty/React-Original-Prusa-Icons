@@ -6,6 +6,7 @@ import home from '../img/home.svg'
 import logo from '../img/prusa-icons-set-logo.svg'
 import search from '../img/search.svg'
 import styled from 'styled-components'
+import { useLocation } from 'react-router-dom'
 
 const LogoLink = styled(Nav.Link)`
     margin-top: 0;
@@ -18,6 +19,8 @@ interface IProps {
 }
 
 const Menu: React.FC<IProps> = (props) => {
+
+    let location = useLocation()
 
     // const menuItemsLeft =
     //     <>
@@ -38,10 +41,10 @@ const Menu: React.FC<IProps> = (props) => {
 
     const menuItemsRight =
         <>
-            <Form inline>
+            {location.pathname === '/' && <Form inline>
                 <img src={search} className="search" alt="Search" />
                 <FormControl value={props.searchTerm} onChange={searchTermChange} type="text" placeholder="Search" className="ml-sm-2 mr-sm-2" />
-            </Form>
+            </Form>}
         </>
 
     return (
