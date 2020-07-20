@@ -4,7 +4,7 @@ import React, { ComponentType, Suspense, useRef, useState } from 'react'
 
 import Icon from './interfaces/Icon'
 import JSZip from 'jszip'
-import Spinner from './components/helpers/spinner'
+import Pace from 'react-pace-progress'
 import Tag from './components/helpers/tag'
 import bg from 'src/img/bg.png'
 import download from 'downloadjs'
@@ -186,7 +186,7 @@ const IconDetail: React.FC<{}> = () => {
                     )
                 })}
             </div>
-            <Suspense fallback={<Spinner />}>
+            <Suspense fallback={<Pace />}>
                 <IconContainer ref={iconRef}>
                     <IconCompoment width={width} height={height} withBackground={withBackground} theme={theme} />
                 </IconContainer>

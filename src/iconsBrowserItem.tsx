@@ -4,7 +4,7 @@ import React, { ComponentType, Suspense } from 'react'
 import { Col } from 'react-bootstrap'
 import Icon from './interfaces/Icon'
 import { Link } from 'react-router-dom'
-import Spinner from './components/helpers/spinner'
+import Pace from 'react-pace-progress'
 import styled from 'styled-components'
 
 const IconContainer = styled.div`
@@ -63,7 +63,7 @@ interface IProps {
 const IconsBrowserItem: React.FC<IProps> = (props) => {
     return (
 
-        <Suspense fallback={<Spinner />}>
+        <Suspense fallback={<Pace />}>
             {props.files.filter(item => !!item.file).map((item: any, i: number) => {
 
                 const Compoment = React.lazy<ComponentType<Icon>>(() => import(`./lib/${props.folder}/${item.file.replace('.tsx', '')}`))
