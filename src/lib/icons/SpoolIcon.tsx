@@ -1,9 +1,9 @@
 import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../../config'
 import React, { useEffect, useState } from 'react'
 
-import { BackgroundSwitcher } from '../../components/helpers/backgroundSwitcher'
+import { BackgroundSwitcher } from 'src/components/helpers/backgroundSwitcher'
 import IconDetail from '../../interfaces/Icon'
-import { Scale } from '../../components/helpers/scale'
+import { Scale } from 'src/components/helpers/scale'
 import { ThemeSwitcher } from '../../components/helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
@@ -11,9 +11,9 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 288.76
+const viewBox: number = 1333.33
 
-const NozzleIcon = (props: IProps) => {
+const SpoolIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -23,25 +23,25 @@ const NozzleIcon = (props: IProps) => {
     useEffect(() => {
         ThemeSwitcher(props.theme, setPrimaryColor, setSecondaryColor, setBackgroundColor)
         BackgroundSwitcher(props.withBackground, viewBoxStart, setViewBoxStart, viewBoxEnd, setViewBoxEnd)
-    }, [props.theme, props.withBackground]) // eslint-disable-line
+    }, [props.theme]) // eslint-disable-line
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-                <Scale withBackground={props.withBackground}>
-                    <path fill={secondaryColor?.toString()} d="M154.43 143.15l0 20.11c0,0 0,0.01 0,0.02 0,5.54 -4.5,10.04 -10.04,10.04 -0,0 -0,0 -0.01,0l-44.54 0 0 6.1 99.3 0c0,-0 0.01,-0 0.02,-0 5.54,0 10.04,4.5 10.04,10.04 0,0.01 0,0.01 0,0.02l0 26.04c0,0 0,0.01 0,0.02 0,5.54 -4.5,10.04 -10.04,10.04 -0.01,0 -0.01,0 -0.02,0l-109.17 0c-5.47,-0.12 -9.84,-4.59 -9.84,-10.06 0,-5.47 4.38,-9.94 9.84,-10.06l99.29 0 0 -6.11 -99.3 0c-0,-0 -0.01,-0 -0.02,-0 -5.54,0 -10.04,-4.5 -10.04,-10.04 0,-0.01 0,-0.01 0,-0.02l-0 -26.04c0,-0 0,-0.01 0,-0.01 0,-5.54 4.5,-10.04 10.04,-10.04 0.01,0 0.01,0 0.02,0l44.53 0 0 -10.06 20.11 0 -0.18 0z" />
-                    <path fill={primaryColor?.toString()} d="M189.81 65.54L189.81 102.54 157.67 144.38 131.09 144.38 98.95 102.54 98.95 65.54 119.06 65.54 119.06 95.71 140.79 124.26 147.81 124.26 169.72 95.71 169.72 65.54z" />
-                </Scale>
+            <Scale withBackground={props.withBackground}>
+                <path fill={primaryColor?.toString()} d="M666.68 273.7c-217.05,0 -393.01,175.95 -393.01,393.01 0,72.81 19.81,140.99 54.33,199.45l0 -199.45 0 -0.81c0.44,-186.67 151.91,-337.86 338.64,-337.86 300.76,0 452.29,365.33 239.47,578.15 -161.5,161.54 -410.85,113.14 -521.68,-51.07l0 85.06c71.43,73.7 171.47,119.51 282.21,119.51 217.05,0 393.01,-175.95 393.01,-393.01 0,-217.05 -175.95,-393.01 -393.01,-393.01l0.03 0.03zm104.02 288.99c-92.39,-92.42 -251.07,-26.66 -251.07,104.02 0,130.64 158.69,196.43 251.07,104.02 57.42,-57.45 57.45,-150.58 0,-208l0 -0.04zm-104.02 -1.83c-58.43,0 -105.81,47.38 -105.81,105.81 0,58.43 47.38,105.81 105.81,105.81 58.43,0 105.81,-47.38 105.81,-105.81 0,-58.43 -47.38,-105.81 -105.81,-105.81z" />
+                <path fill={secondaryColor?.toString()} d="M666.68 328.03c300.76,0 452.29,365.33 239.47,578.15 -161.5,161.54 -410.85,113.14 -521.68,-51.07l0 174.39c0,15.6 -12.65,28.22 -28.22,28.22 -15.6,0 -28.22,-12.65 -28.22,-28.22l0 -362.79 0 -0.81c0.44,-186.67 151.91,-337.86 338.64,-337.86l0.01 -0.01zm104.02 234.65c-92.39,-92.42 -251.07,-26.66 -251.07,104.02 0,130.64 158.69,196.43 251.07,104.02 57.42,-57.45 57.45,-150.58 0,-208l0 -0.04z" />
+            </Scale>
         </svg>
     )
 }
 
-export default NozzleIcon
+export default SpoolIcon
 
-NozzleIcon.defaultProps = {
-    name: 'Nozzle icon',
-    componentName: 'NozzleIcon',
-    description: 'FDM or FFF nozzle with extruded filament.',
+SpoolIcon.defaultProps = {
+    name: 'Spool icon',
+    componentName: 'SpoolIcon',
+    description: 'Filament spool icon.',
     tags: [Tag.ICONS, Tag.MINI],
 
     folder: Folder.ICONS,
@@ -55,7 +55,7 @@ NozzleIcon.defaultProps = {
     secondaryColor: Color.ORANGE,
 
     withBackground: true,
-    backgroundColor: Color.TRANSPARENT,
+    backgroundColor: Color.WHITE,
     backgroundRounded: true,
     backgroundRadius: (viewBox * DefaultRadiusRatio),
 }

@@ -1,5 +1,5 @@
 import { Button, ButtonGroup, Form } from 'react-bootstrap'
-import { DefaultSize, Sizes, Tags, Theme } from './config'
+import { DefaultSize, Folder, Folders, Sizes, Tags, Theme } from './config'
 import React, { ComponentType, Suspense, useRef, useState } from 'react'
 
 import Icon from './interfaces/Icon'
@@ -96,7 +96,7 @@ const IconDetail: React.FC<{}> = () => {
     const setMonochromeTheme = () => {
         setTheme(Theme.MONOCHROME)
     }
-    
+
     const downloadZip = () => {
         console.log('downloadZip')
         const zip = new JSZip()
@@ -171,6 +171,10 @@ const IconDetail: React.FC<{}> = () => {
         setSize(size)
     }
 
+    const isInFolder = (folders: Folders): boolean => {
+        return folders.includes(folder)
+    }
+
     return (
         <DetailContainer>
             <H1>{name}</H1>
@@ -190,12 +194,18 @@ const IconDetail: React.FC<{}> = () => {
                 <H2>Theme</H2>
                 <Form>
                     <Form.Group controlId="thm">
-                        <Form.Check checked={theme === Theme.LIGHT} onChange={setLightTheme} custom inline label="light" type="radio" id="light" />
-                        <Form.Check checked={theme === Theme.DARK} onChange={setDarkTheme} custom inline label="dark" type="radio" id="dark" />
-                        <Form.Check checked={theme === Theme.WHITE} onChange={setWhiteTheme} custom inline label="white" type="radio" id="white" />
-                        <Form.Check checked={theme === Theme.BLACK} onChange={setBlackTheme} custom inline label="black" type="radio" id="black" />
-                        <Form.Check checked={theme === Theme.GRAYSCALE} onChange={setGrayscaleTheme} custom inline label="grayscale" type="radio" id="grayscale" />
-                        <Form.Check checked={theme === Theme.MONOCHROME} onChange={setMonochromeTheme} custom inline label="monochrome" type="radio" id="monochrome" />
+                        {isInFolder([Folder.ICONS, Folder.FAVICONS]) &&
+                            <Form.Check checked={theme === Theme.LIGHT} onChange={setLightTheme} custom inline label="light" type="radio" id="light" />}
+                        {isInFolder([Folder.ICONS, Folder.FAVICONS]) &&
+                            <Form.Check checked={theme === Theme.DARK} onChange={setDarkTheme} custom inline label="dark" type="radio" id="dark" />}
+                        {isInFolder([Folder.ICONS]) &&
+                            <Form.Check checked={theme === Theme.WHITE} onChange={setWhiteTheme} custom inline label="white" type="radio" id="white" />}
+                        {isInFolder([Folder.ICONS]) &&
+                            <Form.Check checked={theme === Theme.BLACK} onChange={setBlackTheme} custom inline label="black" type="radio" id="black" />}
+                        {isInFolder([Folder.ICONS, Folder.FAVICONS]) &&
+                            <Form.Check checked={theme === Theme.GRAYSCALE} onChange={setGrayscaleTheme} custom inline label="grayscale" type="radio" id="grayscale" />}
+                        {isInFolder([Folder.FAVICONS]) &&
+                            <Form.Check checked={theme === Theme.MONOCHROME} onChange={setMonochromeTheme} custom inline label="monochrome" type="radio" id="monochrome" />}
                     </Form.Group>
                 </Form>
 

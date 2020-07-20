@@ -1,19 +1,19 @@
 import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../../config'
 import React, { useEffect, useState } from 'react'
 
-import { BackgroundSwitcher } from '../../components/helpers/backgroundSwitcher'
+import { BackgroundSwitcher } from 'src/components/helpers/backgroundSwitcher'
 import IconDetail from '../../interfaces/Icon'
-import { Scale } from '../../components/helpers/scale'
-import { ThemeSwitcher } from '../../components/helpers/themeSwitcher'
+import { Scale } from 'src/components/helpers/scale'
+import { ThemeSwitcher } from 'src/components/helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
     primaryColor?: string | Color,
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 288.76
+const viewBox: number = 500
 
-const NozzleIcon = (props: IProps) => {
+const PrintIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -23,26 +23,26 @@ const NozzleIcon = (props: IProps) => {
     useEffect(() => {
         ThemeSwitcher(props.theme, setPrimaryColor, setSecondaryColor, setBackgroundColor)
         BackgroundSwitcher(props.withBackground, viewBoxStart, setViewBoxStart, viewBoxEnd, setViewBoxEnd)
-    }, [props.theme, props.withBackground]) // eslint-disable-line
+    }, [props.theme]) // eslint-disable-line
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-                <Scale withBackground={props.withBackground}>
-                    <path fill={secondaryColor?.toString()} d="M154.43 143.15l0 20.11c0,0 0,0.01 0,0.02 0,5.54 -4.5,10.04 -10.04,10.04 -0,0 -0,0 -0.01,0l-44.54 0 0 6.1 99.3 0c0,-0 0.01,-0 0.02,-0 5.54,0 10.04,4.5 10.04,10.04 0,0.01 0,0.01 0,0.02l0 26.04c0,0 0,0.01 0,0.02 0,5.54 -4.5,10.04 -10.04,10.04 -0.01,0 -0.01,0 -0.02,0l-109.17 0c-5.47,-0.12 -9.84,-4.59 -9.84,-10.06 0,-5.47 4.38,-9.94 9.84,-10.06l99.29 0 0 -6.11 -99.3 0c-0,-0 -0.01,-0 -0.02,-0 -5.54,0 -10.04,-4.5 -10.04,-10.04 0,-0.01 0,-0.01 0,-0.02l-0 -26.04c0,-0 0,-0.01 0,-0.01 0,-5.54 4.5,-10.04 10.04,-10.04 0.01,0 0.01,0 0.02,0l44.53 0 0 -10.06 20.11 0 -0.18 0z" />
-                    <path fill={primaryColor?.toString()} d="M189.81 65.54L189.81 102.54 157.67 144.38 131.09 144.38 98.95 102.54 98.95 65.54 119.06 65.54 119.06 95.71 140.79 124.26 147.81 124.26 169.72 95.71 169.72 65.54z" />
-                </Scale>
+            <Scale withBackground={props.withBackground}>
+                <path fill={primaryColor?.toString()} d="M249.94 87.95c143.84,0 216.36,174.74 114.55,276.55 -101.81,101.81 -276.55,29.29 -276.55,-114.55 0,-0.01 0,-0.01 0,-0.01 0,-89.45 72.54,-161.99 161.99,-161.99 0,0 0,0 0,0l0 -0zm91.66 70.33c-81.46,-81.4 -221.25,-23.46 -221.25,91.66 0,115.13 139.79,173.07 221.25,91.66 24.28,-24.29 37.96,-57.28 37.96,-91.64 0,-34.36 -13.68,-67.34 -37.97,-91.63l0 -0.07z" />
+                <path fill={secondaryColor?.toString()} d="M203.9 176.82L203.9 323.07 335.49 252.04z" />
+            </Scale>
         </svg>
     )
 }
 
-export default NozzleIcon
+export default PrintIcon
 
-NozzleIcon.defaultProps = {
-    name: 'Nozzle icon',
-    componentName: 'NozzleIcon',
-    description: 'FDM or FFF nozzle with extruded filament.',
-    tags: [Tag.ICONS, Tag.MINI],
+PrintIcon.defaultProps = {
+    name: 'Print icon',
+    componentName: 'PrintIcon',
+    description: 'Universal print icon for all types of printers.',
+    tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
 
     folder: Folder.ICONS,
 
@@ -55,8 +55,7 @@ NozzleIcon.defaultProps = {
     secondaryColor: Color.ORANGE,
 
     withBackground: true,
-    backgroundColor: Color.TRANSPARENT,
+    backgroundColor: Color.WHITE,
     backgroundRounded: true,
     backgroundRadius: (viewBox * DefaultRadiusRatio),
 }
-

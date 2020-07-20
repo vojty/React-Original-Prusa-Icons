@@ -3,7 +3,36 @@
     {
       "file": "NozzleIcon.tsx",
       "name": "Nozzle icon",
-      "description": "FDM or FFF nozzle whit extruded filament.",
+      "description": "FDM or FFF nozzle with extruded filament.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
+      "file": "PrintIcon.tsx",
+      "name": "Print icon",
+      "description": "Universal print icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "SettingsIcon.tsx",
+      "name": "Settings icon",
+      "description": "Universal settings icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "SpoolIcon.tsx",
+      "name": "Spool icon",
+      "description": "Filament spool icon.",
       "tags": [
         "ICONS",
         "MINI"

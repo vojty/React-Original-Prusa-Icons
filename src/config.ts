@@ -4,6 +4,8 @@ export const DefaultSize: number = 120
 
 export const DefaultRadiusRatio: number = 0.07
 
+export const DefaultPaddingRatio: number = 0.25
+
 export enum Color {
     TRANSPARENT = 'none',
     WHITE = '#ffffff',
@@ -35,6 +37,8 @@ export enum Folder {
 }
 
 export const DefaultFolder: Folder = Folder.ICONS
+
+export interface Folders extends Array<Folder> { }
 
 export enum Tag {
     MK2 = 'MK2',
