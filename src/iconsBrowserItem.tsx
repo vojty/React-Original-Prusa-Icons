@@ -1,7 +1,7 @@
+import { Color, Folder, Theme } from './config'
 import React, { ComponentType, Suspense } from 'react'
 
 import { Col } from 'react-bootstrap'
-import { Folder } from './config'
 import Icon from './interfaces/Icon'
 import { Link } from 'react-router-dom'
 import Spinner from './components/helpers/spinner'
@@ -72,7 +72,7 @@ const IconsBrowserItem: React.FC<IProps> = (props) => {
                     <Col md={1} key={i}>
                         <IconContainer>
                             <Link className="link" to={`/icon/${item.file.replace('.tsx', '')}/${props.folder}`}>
-                                <Compoment width={48} height={48} />
+                                <Compoment width={48} height={48} backgroundColor={Color.TRANSPARENT} theme={Theme.CUSTOM} />
                                 <span>{item.name}</span>
                             </Link>
                         </IconContainer>
