@@ -69,7 +69,8 @@
     "scan:spinners": "dir src\\lib\\spinners\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\spinners.json",
     "scan:misc": "dir src\\lib\\misc\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\misc.json",
     "scan": "npm run scan:favicons && npm run scan:icons && npm run scan:logos && npm run scan:spinners && npm run scan:misc",
-    "parse": "node ./parse.ts"
+    "parse": "node ./parse.ts",
+    "pages": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
