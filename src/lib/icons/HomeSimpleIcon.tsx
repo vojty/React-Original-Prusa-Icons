@@ -11,13 +11,13 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 307.69
+const viewBox: number = 800.06
 
-const PrintIcon = (props: IProps) => {
+const HomeSimpleIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
-    const [secondaryColor, setSecondaryColor] = useState<String | Color | undefined>(props.secondaryColor)
+    const [secondaryColor, setSecondaryColor] = useState<String | Color | undefined>(props.secondaryColor) // eslint-disable-line
     const [backgroundColor, setBackgroundColor] = useState<String | Color | undefined>(props.backgroundColor)
 
     useEffect(() => {
@@ -29,20 +29,19 @@ const PrintIcon = (props: IProps) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
             <Scale withBackground={props.withBackground}>
-            <path fill={primaryColor?.toString()} d="M153.84 43.27c-61.07,0 -110.58,49.51 -110.58,110.58 0,61.06 49.51,110.58 110.58,110.58 61.06,0 110.58,-49.51 110.58,-110.58 0,-61.07 -49.51,-110.58 -110.58,-110.58zm0 18.44c50.79,0 92.14,41.35 92.14,92.14 0,50.79 -41.35,92.14 -92.14,92.14 -50.79,0 -92.14,-41.35 -92.14,-92.14 0,-50.79 41.35,-92.14 92.14,-92.14z" />
-                <path fill={secondaryColor?.toString()} d="M120.04 99.78L120.04 207.91 217.33 155.39z" />
+                <path fill={primaryColor?.toString()} d="M400.2 205.06l-200.1 186.08 0 203.87 399.87 0 0 -203.87 -200.1 -186.08 0 0 0 0 0.34 0zm0 60.88l155.64 144.69 0 139.9 -310.93 0 0 -139.9 155.64 -144.69 0 0 -0.34 0z" />
             </Scale>
         </svg>
     )
 }
 
-export default PrintIcon
+export default HomeSimpleIcon
 
-PrintIcon.defaultProps = {
-    name: 'Print icon',
-    componentName: 'PrintIcon',
-    description: 'Universal print (play) icon for all types of printers.',
-    tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
+HomeSimpleIcon.defaultProps = {
+    name: 'Home simple icon',
+    componentName: 'HomeSimpleIcon',
+    description: 'Universal simple Home icon for all types of printers.',
+    tags: [Tag.ICONS, Tag.MINI, Tag.SL1, Tag.OUTLINE],
 
     folder: Folder.ICONS,
 
@@ -52,7 +51,7 @@ PrintIcon.defaultProps = {
     theme: Theme.LIGHT,
 
     primaryColor: Color.DARK_GRAY,
-    secondaryColor: Color.ORANGE,
+    secondaryColor: Color.TRANSPARENT,
 
     withBackground: true,
     backgroundColor: Color.WHITE,

@@ -11,9 +11,9 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 307.69
+const viewBox: number = 307.66
 
-const PrintIcon = (props: IProps) => {
+const SpeedIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -29,20 +29,20 @@ const PrintIcon = (props: IProps) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
             <Scale withBackground={props.withBackground}>
-            <path fill={primaryColor?.toString()} d="M153.84 43.27c-61.07,0 -110.58,49.51 -110.58,110.58 0,61.06 49.51,110.58 110.58,110.58 61.06,0 110.58,-49.51 110.58,-110.58 0,-61.07 -49.51,-110.58 -110.58,-110.58zm0 18.44c50.79,0 92.14,41.35 92.14,92.14 0,50.79 -41.35,92.14 -92.14,92.14 -50.79,0 -92.14,-41.35 -92.14,-92.14 0,-50.79 41.35,-92.14 92.14,-92.14z" />
-                <path fill={secondaryColor?.toString()} d="M120.04 99.78L120.04 207.91 217.33 155.39z" />
+                <path fill={secondaryColor?.toString()} d="M153.83 205.63c-10.97,0 -19.86,-8.89 -19.86,-19.86 0,-7.49 4.15,-14.01 10.26,-17.39l9.61 -47.54 9.61 47.52c6.12,3.38 10.26,9.9 10.26,17.39 0,10.98 -8.89,19.88 -19.87,19.88l0 0z" />
+                <path fill={primaryColor?.toString()} d="M255.58 154.75c0,18.52 -4.97,35.9 -13.65,50.87l-14.72 -8.51c7.22,-12.47 11.41,-26.91 11.41,-42.37 0,-46.83 -37.96,-84.79 -84.79,-84.79 -46.83,0 -84.79,37.96 -84.79,84.79 0,15.45 4.2,29.89 11.41,42.37l-14.72 8.51c-8.68,-14.98 -13.65,-32.35 -13.65,-50.87 0,-56.11 45.65,-101.75 101.75,-101.75 56.11,0 101.75,45.65 101.75,101.75l-0 0z" />
             </Scale>
         </svg>
     )
 }
 
-export default PrintIcon
+export default SpeedIcon
 
-PrintIcon.defaultProps = {
-    name: 'Print icon',
-    componentName: 'PrintIcon',
-    description: 'Universal print (play) icon for all types of printers.',
-    tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
+SpeedIcon.defaultProps = {
+    name: 'Speed icon',
+    componentName: 'SpeedIcon',
+    description: 'Speed icon for FDM printers.',
+    tags: [Tag.ICONS, Tag.MINI],
 
     folder: Folder.ICONS,
 

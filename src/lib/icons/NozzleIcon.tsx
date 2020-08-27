@@ -11,7 +11,7 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 288.76
+const viewBox: number = 235.3
 
 const NozzleIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
@@ -28,10 +28,10 @@ const NozzleIcon = (props: IProps) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-                <Scale withBackground={props.withBackground}>
-                    <path fill={secondaryColor?.toString()} d="M154.43 143.15l0 20.11c0,0 0,0.01 0,0.02 0,5.54 -4.5,10.04 -10.04,10.04 -0,0 -0,0 -0.01,0l-44.54 0 0 6.1 99.3 0c0,-0 0.01,-0 0.02,-0 5.54,0 10.04,4.5 10.04,10.04 0,0.01 0,0.01 0,0.02l0 26.04c0,0 0,0.01 0,0.02 0,5.54 -4.5,10.04 -10.04,10.04 -0.01,0 -0.01,0 -0.02,0l-109.17 0c-5.47,-0.12 -9.84,-4.59 -9.84,-10.06 0,-5.47 4.38,-9.94 9.84,-10.06l99.29 0 0 -6.11 -99.3 0c-0,-0 -0.01,-0 -0.02,-0 -5.54,0 -10.04,-4.5 -10.04,-10.04 0,-0.01 0,-0.01 0,-0.02l-0 -26.04c0,-0 0,-0.01 0,-0.01 0,-5.54 4.5,-10.04 10.04,-10.04 0.01,0 0.01,0 0.02,0l44.53 0 0 -10.06 20.11 0 -0.18 0z" />
-                    <path fill={primaryColor?.toString()} d="M189.81 65.54L189.81 102.54 157.67 144.38 131.09 144.38 98.95 102.54 98.95 65.54 119.06 65.54 119.06 95.71 140.79 124.26 147.81 124.26 169.72 95.71 169.72 65.54z" />
-                </Scale>
+            <Scale withBackground={props.withBackground}>
+            <path fill={secondaryColor?.toString()} d="M125.71 118.66c0,28.29 4.34,23.58 -44.48,23.58l0 4.97 80.93 0c4.52,0 8.18,3.66 8.18,8.2l0 21.23c0,4.52 -3.66,8.18 -8.2,8.18l-88.96 0c-10.55,-0.12 -10.54,-16.28 0,-16.39l80.91 0 0 -4.98 -80.93 0c-4.52,0 -8.18,-3.66 -8.18,-8.2l0 -21.23c0,-4.52 3.66,-8.18 8.2,-8.18l36.29 0 0 -7.19 16.25 0z" />
+            <path fill={primaryColor?.toString()} d="M154.54 54.41L154.54 84.56 128.35 118.66 106.69 118.66 80.5 84.56 80.5 54.41 96.88 54.41 96.88 79 114.59 102.26 120.31 102.26 138.17 79 138.17 54.41z" />
+            </Scale>
         </svg>
     )
 }

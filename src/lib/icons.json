@@ -1,6 +1,95 @@
 {
   "files": [
     {
+      "file": "CalibrateIcon.tsx",
+      "name": "Calibrate icon",
+      "description": "Calibrate icon for FDM printers.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
+      "file": "FolderIcon.tsx",
+      "name": "Folder icon",
+      "description": "Universal Folder icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FolderOpenedIcon.tsx",
+      "name": "Folder opened icon",
+      "description": "Universal opened Folder icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FolderSimple.tsx",
+      "name": "Folder simple icon",
+      "description": "Universal simple Folder icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "HeatedBedIcon.tsx",
+      "name": "Heated Bed icon",
+      "description": "Heated Bed icon for FDM printers.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
+      "file": "HomeIcon.tsx",
+      "name": "Home icon",
+      "description": "Universal Home icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "HomeSimpleIcon.tsx",
+      "name": "Home simple icon",
+      "description": "Universal simple Home icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1",
+        "OUTLINE"
+      ]
+    },
+    {
+      "file": "InfoIcon.tsx",
+      "name": "Info icon",
+      "description": "Universal Info icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "LanIcon.tsx",
+      "name": "LAN icon",
+      "description": "Universal LAN icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
       "file": "NozzleIcon.tsx",
       "name": "Nozzle icon",
       "description": "FDM or FFF nozzle with extruded filament.",
@@ -10,9 +99,38 @@
       ]
     },
     {
+      "file": "ParentFolderIcon.tsx",
+      "name": "Parent folder icon",
+      "description": "Universal Parent folder icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "PauseIcon.tsx",
+      "name": "Pause icon",
+      "description": "Universal pause icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "PreheatIcon.tsx",
+      "name": "Preheat icon",
+      "description": "Preheating nozzle and heated bed.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
       "file": "PrintIcon.tsx",
       "name": "Print icon",
-      "description": "Universal print icon for all types of printers.",
+      "description": "Universal print (play) icon for all types of printers.",
       "tags": [
         "ICONS",
         "MINI",
@@ -30,9 +148,47 @@
       ]
     },
     {
+      "file": "SpeedIcon.tsx",
+      "name": "Speed icon",
+      "description": "Speed icon for FDM printers.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
       "file": "SpoolIcon.tsx",
       "name": "Spool icon",
       "description": "Filament spool icon.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
+      "file": "StopIcon.tsx",
+      "name": "Stop icon",
+      "description": "Universal Stop icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "WifiIcon.tsx",
+      "name": "Wifi icon",
+      "description": "Universal Wifi icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ZaxisIcon.tsx",
+      "name": "Z axis icon",
+      "description": "Z axis icon for FDM printers.",
       "tags": [
         "ICONS",
         "MINI"

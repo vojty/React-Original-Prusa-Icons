@@ -11,9 +11,9 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 307.69
+const viewBox: number = 3996.8
 
-const PrintIcon = (props: IProps) => {
+const ZaxisIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -29,20 +29,20 @@ const PrintIcon = (props: IProps) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
             <Scale withBackground={props.withBackground}>
-            <path fill={primaryColor?.toString()} d="M153.84 43.27c-61.07,0 -110.58,49.51 -110.58,110.58 0,61.06 49.51,110.58 110.58,110.58 61.06,0 110.58,-49.51 110.58,-110.58 0,-61.07 -49.51,-110.58 -110.58,-110.58zm0 18.44c50.79,0 92.14,41.35 92.14,92.14 0,50.79 -41.35,92.14 -92.14,92.14 -50.79,0 -92.14,-41.35 -92.14,-92.14 0,-50.79 41.35,-92.14 92.14,-92.14z" />
-                <path fill={secondaryColor?.toString()} d="M120.04 99.78L120.04 207.91 217.33 155.39z" />
+                <path fill={secondaryColor?.toString()} d="M1398.68 1673.2L1540.03 1531.77 1998.4 1998.4 2456.39 1531.77 2597.74 1673.2 1998.4 2281.18z" />
+                <path fill={primaryColor?.toString()} fillRule="nonzero" d="M1032.27 2668.61l1932.25 0 0 267.39 -1932.25 0 0 -267.39zm721.36 -1150.44l339.27 -410.23 -329.98 0 0 -102.4 464.47 0 0 87.95 -328.3 410.31 330.84 0 0 102.4 -476.3 0 0 -88.03z" />
             </Scale>
         </svg>
     )
 }
 
-export default PrintIcon
+export default ZaxisIcon
 
-PrintIcon.defaultProps = {
-    name: 'Print icon',
-    componentName: 'PrintIcon',
-    description: 'Universal print (play) icon for all types of printers.',
-    tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
+ZaxisIcon.defaultProps = {
+    name: 'Z axis icon',
+    componentName: 'ZaxisIcon',
+    description: 'Z axis icon for FDM printers.',
+    tags: [Tag.ICONS, Tag.MINI],
 
     folder: Folder.ICONS,
 

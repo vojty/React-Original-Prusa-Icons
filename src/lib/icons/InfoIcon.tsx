@@ -11,9 +11,9 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 307.69
+const viewBox: number = 235.3
 
-const PrintIcon = (props: IProps) => {
+const InfoIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -29,19 +29,19 @@ const PrintIcon = (props: IProps) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
             <Scale withBackground={props.withBackground}>
-            <path fill={primaryColor?.toString()} d="M153.84 43.27c-61.07,0 -110.58,49.51 -110.58,110.58 0,61.06 49.51,110.58 110.58,110.58 61.06,0 110.58,-49.51 110.58,-110.58 0,-61.07 -49.51,-110.58 -110.58,-110.58zm0 18.44c50.79,0 92.14,41.35 92.14,92.14 0,50.79 -41.35,92.14 -92.14,92.14 -50.79,0 -92.14,-41.35 -92.14,-92.14 0,-50.79 41.35,-92.14 92.14,-92.14z" />
-                <path fill={secondaryColor?.toString()} d="M120.04 99.78L120.04 207.91 217.33 155.39z" />
+                <path fill={primaryColor?.toString()} d="M117.65 33.09c-46.7,0 -84.56,37.86 -84.56,84.56 0,46.7 37.86,84.56 84.56,84.56 46.7,0 84.56,-37.86 84.56,-84.56 0,-46.7 -37.86,-84.56 -84.56,-84.56zm0 14.1c38.84,0 70.46,31.62 70.46,70.46 0,38.84 -31.62,70.46 -70.46,70.46 -38.84,0 -70.46,-31.62 -70.46,-70.46 0,-38.84 31.62,-70.46 70.46,-70.46z" />
+                <path fill={secondaryColor?.toString()} d="M99.17 100.89l0 14.09 14.07 0 0 42.26 14.09 0 0 -56.35 -28.17 0zm29.93 -21.12c0,4.86 -3.95,8.81 -8.81,8.81 -4.86,0 -8.81,-3.95 -8.81,-8.81 0,-4.86 3.95,-8.81 8.81,-8.81 4.86,0 8.81,3.95 8.81,8.81z" />
             </Scale>
         </svg>
     )
 }
 
-export default PrintIcon
+export default InfoIcon
 
-PrintIcon.defaultProps = {
-    name: 'Print icon',
-    componentName: 'PrintIcon',
-    description: 'Universal print (play) icon for all types of printers.',
+InfoIcon.defaultProps = {
+    name: 'Info icon',
+    componentName: 'InfoIcon',
+    description: 'Universal Info icon for all types of printers.',
     tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
 
     folder: Folder.ICONS,

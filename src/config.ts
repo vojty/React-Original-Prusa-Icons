@@ -4,7 +4,7 @@ export const DefaultSize: number = 120
 
 export const DefaultRadiusRatio: number = 0.07
 
-export const DefaultPaddingRatio: number = 0.25
+export const DefaultPaddingRatio: number = 0.15
 
 export enum Color {
     TRANSPARENT = 'none',
@@ -54,6 +54,7 @@ export enum Tag {
     LOCAL = 'LOCAL',
     ICONS = 'ICONS',
     FAVICON = 'FAVICON',
+    OUTLINE = 'OUTLINE'
 }
 
 export interface Tags extends Array<Tag> { }

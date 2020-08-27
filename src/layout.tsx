@@ -21,10 +21,10 @@ const Layout: React.FC<{}> = () => {
                 <Menu setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
                 <div className="content">
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/React-Original-Prusa-Icons">
                             <IconsBrowser searchTerm={searchTerm} />
                         </Route>
-                        <Route path={`/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
+                        <Route path={`/React-Original-Prusa-Icons/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
                     </Switch>
                 </div>
             </div>

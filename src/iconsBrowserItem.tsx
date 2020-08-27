@@ -71,7 +71,7 @@ const IconsBrowserItem: React.FC<IProps> = (props) => {
                 return (
                     <Col md={1} key={i}>
                         <IconContainer>
-                            <Link className="link" to={`/icon/${item.file.replace('.tsx', '')}/${props.folder}`}>
+                            <Link className="link" to={`/React-Original-Prusa-Icons/icon/${item.file.replace('.tsx', '')}/${props.folder}`}>
                                 <Compoment width={48} height={48} backgroundColor={Color.TRANSPARENT} theme={Theme.CUSTOM} />
                                 <span>{item.name}</span>
                             </Link>

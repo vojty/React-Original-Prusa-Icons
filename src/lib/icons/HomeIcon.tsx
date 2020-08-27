@@ -11,9 +11,9 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 307.69
+const viewBox: number = 3997.6
 
-const PrintIcon = (props: IProps) => {
+const HomeIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -29,19 +29,19 @@ const PrintIcon = (props: IProps) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
             <Scale withBackground={props.withBackground}>
-            <path fill={primaryColor?.toString()} d="M153.84 43.27c-61.07,0 -110.58,49.51 -110.58,110.58 0,61.06 49.51,110.58 110.58,110.58 61.06,0 110.58,-49.51 110.58,-110.58 0,-61.07 -49.51,-110.58 -110.58,-110.58zm0 18.44c50.79,0 92.14,41.35 92.14,92.14 0,50.79 -41.35,92.14 -92.14,92.14 -50.79,0 -92.14,-41.35 -92.14,-92.14 0,-50.79 41.35,-92.14 92.14,-92.14z" />
-                <path fill={secondaryColor?.toString()} d="M120.04 99.78L120.04 207.91 217.33 155.39z" />
+                <path fill={primaryColor?.toString()} d="M3216.15 2100.08l-1217.35 -1217.33 -1217.33 1217.33 304.2 0 0 1014.77 709.99 0 0 -507.38 405.8 0 0 507.38 709.99 0 0 -1014.77 304.2 0 0.5 0zm-507.4 811.59l-304.2 0 0 -507.4 -811.57 0 0 507.4 -304.2 0 0 -1040.74 709.97 -701.32 709.99 709.41 0 1033.22 0 -0.58z" />
+                <path fill={secondaryColor?.toString()} d="M2810.35 1500.96L2810.35 984.35 2505.58 984.35 2505.58 1196.76z" />
             </Scale>
         </svg>
     )
 }
 
-export default PrintIcon
+export default HomeIcon
 
-PrintIcon.defaultProps = {
-    name: 'Print icon',
-    componentName: 'PrintIcon',
-    description: 'Universal print (play) icon for all types of printers.',
+HomeIcon.defaultProps = {
+    name: 'Home icon',
+    componentName: 'HomeIcon',
+    description: 'Universal Home icon for all types of printers.',
     tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
 
     folder: Folder.ICONS,

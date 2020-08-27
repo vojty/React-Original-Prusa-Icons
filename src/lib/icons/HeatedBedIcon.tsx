@@ -11,9 +11,9 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 307.69
+const viewBox: number = 571.35
 
-const PrintIcon = (props: IProps) => {
+const HeatedBedIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -29,20 +29,20 @@ const PrintIcon = (props: IProps) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
             <Scale withBackground={props.withBackground}>
-            <path fill={primaryColor?.toString()} d="M153.84 43.27c-61.07,0 -110.58,49.51 -110.58,110.58 0,61.06 49.51,110.58 110.58,110.58 61.06,0 110.58,-49.51 110.58,-110.58 0,-61.07 -49.51,-110.58 -110.58,-110.58zm0 18.44c50.79,0 92.14,41.35 92.14,92.14 0,50.79 -41.35,92.14 -92.14,92.14 -50.79,0 -92.14,-41.35 -92.14,-92.14 0,-50.79 41.35,-92.14 92.14,-92.14z" />
-                <path fill={secondaryColor?.toString()} d="M120.04 99.78L120.04 207.91 217.33 155.39z" />
+                <path fill={secondaryColor?.toString()} d="M225.41 329.76c-22.32,-22.04 -25.14,-35.03 -5.65,-60.18 6.78,-8.76 9.89,-17.52 9.89,-26 0,-17.8 -12.99,-35.31 -29.94,-55.66l-26.84 25.43c25.43,29.67 23.17,32.78 4.8,58.77 -5.94,8.48 -8.19,16.67 -8.19,25.14 0,21.47 16.11,41.81 30.8,57.07l25.43 -24.59 0 0 -0.29 0.01zm160.76 0c-22.32,-22.04 -25.14,-35.03 -5.65,-60.18 6.78,-8.76 9.89,-17.52 9.89,-26 0,-17.8 -13,-35.31 -29.95,-55.66l-26.84 25.43c25.43,29.67 23.17,32.78 4.8,58.77 -5.93,8.48 -8.19,16.67 -8.19,25.14 0,21.47 16.1,41.81 30.8,57.07l25.43 -24.59 0 0 -0.29 0.01zm-81.37 0c-22.32,-22.04 -25.14,-35.03 -5.65,-60.18 6.78,-8.76 9.89,-17.52 9.89,-26 0,-17.8 -13,-35.31 -29.95,-55.66l-26.84 25.43c25.43,29.67 23.17,32.78 4.8,58.77 -5.93,8.48 -8.19,16.67 -8.19,25.14 0,21.47 16.1,41.81 30.8,57.07l25.43 -24.59 0 0 -0.29 0.01z" />
+                <path fill={primaryColor?.toString()} fillRule="nonzero" d="M137.27 379.77L422.06 379.77 422.06 419.05 137.27 419.05z" />
             </Scale>
         </svg>
     )
 }
 
-export default PrintIcon
+export default HeatedBedIcon
 
-PrintIcon.defaultProps = {
-    name: 'Print icon',
-    componentName: 'PrintIcon',
-    description: 'Universal print (play) icon for all types of printers.',
-    tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
+HeatedBedIcon.defaultProps = {
+    name: 'Heated Bed icon',
+    componentName: 'HeatedBedIcon',
+    description: 'Heated Bed icon for FDM printers.',
+    tags: [Tag.ICONS, Tag.MINI],
 
     folder: Folder.ICONS,
 

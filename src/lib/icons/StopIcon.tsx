@@ -11,9 +11,9 @@ interface IProps extends IconDetail {
     secondaryColor?: string | Color,
 }
 
-const viewBox: number = 307.69
+const viewBox: number = 571.4
 
-const PrintIcon = (props: IProps) => {
+const StopIcon = (props: IProps) => {
     const [viewBoxStart, setViewBoxStart] = useState<number>(0)
     const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
@@ -29,19 +29,19 @@ const PrintIcon = (props: IProps) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
             {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
             <Scale withBackground={props.withBackground}>
-            <path fill={primaryColor?.toString()} d="M153.84 43.27c-61.07,0 -110.58,49.51 -110.58,110.58 0,61.06 49.51,110.58 110.58,110.58 61.06,0 110.58,-49.51 110.58,-110.58 0,-61.07 -49.51,-110.58 -110.58,-110.58zm0 18.44c50.79,0 92.14,41.35 92.14,92.14 0,50.79 -41.35,92.14 -92.14,92.14 -50.79,0 -92.14,-41.35 -92.14,-92.14 0,-50.79 41.35,-92.14 92.14,-92.14z" />
-                <path fill={secondaryColor?.toString()} d="M120.04 99.78L120.04 207.91 217.33 155.39z" />
+                <path fill={primaryColor?.toString()} d="M285.7 80.35c-113.4,0 -205.35,91.95 -205.35,205.35 0,113.4 91.95,205.35 205.35,205.35 113.4,0 205.35,-91.95 205.35,-205.35 0,-113.4 -91.95,-205.35 -205.35,-205.35zm0 34.24c94.33,0 171.11,76.79 171.11,171.11 0,94.32 -76.79,171.11 -171.11,171.11 -94.32,0 -171.11,-76.79 -171.11,-171.11 0,-94.33 76.79,-171.11 171.11,-171.11z" />
+                <path fill={secondaryColor?.toString()} d="M200.15 200.14L371.27 200.14 371.27 371.26 200.15 371.26z" />
             </Scale>
         </svg>
     )
 }
 
-export default PrintIcon
+export default StopIcon
 
-PrintIcon.defaultProps = {
-    name: 'Print icon',
-    componentName: 'PrintIcon',
-    description: 'Universal print (play) icon for all types of printers.',
+StopIcon.defaultProps = {
+    name: 'Stop icon',
+    componentName: 'StopIcon',
+    description: 'Universal Stop icon for all types of printers.',
     tags: [Tag.ICONS, Tag.MINI, Tag.SL1],
 
     folder: Folder.ICONS,

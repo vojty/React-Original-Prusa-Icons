@@ -1,6 +1,6 @@
 {
   "name": "react-original-prusa-icons",
-  "homepage": "http://michalxfanta.github.io/react-original-prusa-icons",
+  "homepage": "https://michalxfanta.github.io/React-Original-Prusa-Icons",
   "version": "0.1.4",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -70,7 +70,7 @@
     "scan:misc": "dir src\\lib\\misc\\*.tsx /b /A-D /o:gn | jq -Rs -f filter.jq > src\\lib\\misc.json",
     "scan": "npm run scan:favicons && npm run scan:icons && npm run scan:logos && npm run scan:spinners && npm run scan:misc",
     "parse": "node ./parse.ts",
-    "pages": "gh-pages -d build"
+    "pages": "cd build && DEL /F/Q/S *.* > NUL && cd .. && npm run build && cd build && git init && git add . && git commit -m \"Initial commit\" && git remote add origin git@github.com:michalxfanta/React-Original-Prusa-Icons.git && git push --force origin master:gh-pages"
   },
   "eslintConfig": {
     "extends": "react-app"
