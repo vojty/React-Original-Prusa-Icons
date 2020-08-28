@@ -43,6 +43,10 @@ const H2 = styled.h2`
     margin-top: 1rem;
 `
 
+const FormLabelDisabled = styled(Form.Label)`
+    color: #6c757d;
+`
+
 const IconDetail: React.FC<{}> = () => {
 
     const [name, setName] = useState<string>('')
@@ -54,7 +58,8 @@ const IconDetail: React.FC<{}> = () => {
 
     const [size, setSize] = useState<number>(DefaultSize)
 
-    const [withBackground, setWithBackground] = useState<boolean>(true)
+    const [withBackground, setWithBackground] = useState<boolean>(false)
+    const [withPadding, setWithPadding] = useState<boolean>(false)
     const [theme, setTheme] = useState<Theme>(Theme.LIGHT)
 
     const { folder, componentName } = useParams()
@@ -71,6 +76,11 @@ const IconDetail: React.FC<{}> = () => {
 
     const withBackgroundChange = (e: React.FormEvent<HTMLInputElement>) => {
         setWithBackground(e.currentTarget.checked)
+        setWithPadding(e.currentTarget.checked)
+    }
+
+    const withPaddingChange = (e: React.FormEvent<HTMLInputElement>) => {
+        setWithPadding(e.currentTarget.checked)
     }
 
     const setLightTheme = () => {
@@ -188,7 +198,7 @@ const IconDetail: React.FC<{}> = () => {
             </div>
             <Suspense fallback={<Pace />}>
                 <IconContainer ref={iconRef}>
-                    <IconCompoment width={width} height={height} withBackground={withBackground} theme={theme} />
+                    <IconCompoment width={width} height={height} withBackground={withBackground} withPadding={withPadding} theme={theme} />
                 </IconContainer>
 
                 <H2>Theme</H2>
@@ -213,6 +223,13 @@ const IconDetail: React.FC<{}> = () => {
                     <Form.Group controlId="withBackground">
                         <Form.Label>Background</Form.Label>
                         <Form.Check checked={withBackground} onChange={withBackgroundChange} label={withBackground ? 'on' : 'off'} type="switch" />
+                    </Form.Group>
+                </H2>
+
+                <H2>
+                    <Form.Group controlId="withPadding">
+                        {!withBackground ? <FormLabelDisabled>Padding</FormLabelDisabled> : <Form.Label>Padding</Form.Label>}
+                        <Form.Check checked={withPadding} onChange={withPaddingChange} label={withPadding ? 'on' : 'off'} type="switch" disabled={!withBackground} />
                     </Form.Group>
                 </H2>
 

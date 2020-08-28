@@ -1,7 +1,6 @@
 import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../../config'
 import React, { useEffect, useState } from 'react'
 
-import { BackgroundSwitcher } from 'src/components/helpers/backgroundSwitcher'
 import IconDetail from '../../interfaces/Icon'
 import { Scale } from 'src/components/helpers/scale'
 import { ThemeSwitcher } from '../../components/helpers/themeSwitcher'
@@ -14,23 +13,20 @@ interface IProps extends IconDetail {
 const viewBox: number = 800.1
 
 const SpoolIcon = (props: IProps) => {
-    const [viewBoxStart, setViewBoxStart] = useState<number>(0)
-    const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
     const [secondaryColor, setSecondaryColor] = useState<String | Color | undefined>(props.secondaryColor)
     const [backgroundColor, setBackgroundColor] = useState<String | Color | undefined>(props.backgroundColor)
 
     useEffect(() => {
         ThemeSwitcher(props.theme, setPrimaryColor, setSecondaryColor, setBackgroundColor)
-        BackgroundSwitcher(props.withBackground, viewBoxStart, setViewBoxStart, viewBoxEnd, setViewBoxEnd)
-    }, [props.theme]) // eslint-disable-line
+    }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
-            {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-            <Scale withBackground={props.withBackground}>
-                <path fill={primaryColor?.toString()} d="M400.06 140.03c-143.62,0 -260.04,116.42 -260.04,260.04 0,48.18 13.11,93.28 35.95,131.97l0 -131.97 0 -0.54c0.29,-123.51 100.51,-223.55 224.07,-223.55 199,0 299.27,241.73 158.45,382.54 -106.86,106.88 -271.84,74.86 -345.18,-33.8l0 56.28c47.26,48.77 113.46,79.08 186.73,79.08 143.62,0 260.04,-116.42 260.04,-260.04 0,-143.62 -116.42,-260.04 -260.04,-260.04l0.02 0.02zm68.83 191.21c-61.13,-61.15 -166.13,-17.64 -166.13,68.83 0,86.44 105,129.97 166.13,68.82 37.99,-38.01 38.02,-99.63 0,-137.63l0 -0.02zm-68.83 -1.21c-38.66,0 -70.01,31.35 -70.01,70.01 0,38.66 31.35,70.01 70.01,70.01 38.66,0 70.01,-31.35 70.01,-70.01 0,-38.66 -31.35,-70.01 -70.01,-70.01z" />
-                <path fill={secondaryColor?.toString()} d="M400.06 175.98c199,0 299.27,241.73 158.46,382.54 -106.86,106.88 -271.85,74.86 -345.18,-33.8l0 115.39c0,10.32 -8.37,18.67 -18.67,18.67 -10.32,0 -18.67,-8.37 -18.67,-18.67l0 -240.04 0 -0.54c0.29,-123.51 100.52,-223.55 224.07,-223.55l0 -0zm68.83 155.26c-61.13,-61.15 -166.13,-17.64 -166.13,68.83 0,86.44 105,129.97 166.13,68.82 37.99,-38.01 38.02,-99.63 0,-137.63l0 -0.02z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${0} ${0} ${viewBox} ${viewBox}`}>
+            {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBox} height={viewBox} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
+            <Scale withPadding={props.withPadding} width={props.width} height={props.height} viewBox={viewBox}>
+                <path fill={primaryColor?.toString()} d="M400.06 0.03c-220.95,0 -400.05,179.11 -400.05,400.05 0,74.12 20.16,143.52 55.31,203.03l0 -203.03 0 -0.82c0.45,-190.01 154.63,-343.92 344.71,-343.92 306.15,0 460.4,371.88 243.77,588.51 -164.4,164.44 -418.21,115.17 -531.04,-51.99l0 86.59c72.71,75.02 174.55,121.65 287.27,121.65 220.95,0 400.05,-179.11 400.05,-400.05 0,-220.94 -179.11,-400.05 -400.05,-400.05l0.04 0.04zm105.88 294.17c-94.04,-94.08 -255.57,-27.14 -255.57,105.88 0,132.98 161.53,199.96 255.57,105.88 58.45,-58.48 58.48,-153.28 0,-211.73l0 -0.04zm-105.88 -1.86c-59.48,0 -107.71,48.23 -107.71,107.71 0,59.48 48.23,107.71 107.71,107.71 59.48,0 107.71,-48.23 107.71,-107.71 0,-59.48 -48.23,-107.71 -107.71,-107.71z" />
+                <path fill={secondaryColor?.toString()} d="M400.06 55.34c306.15,0 460.4,371.88 243.77,588.51 -164.4,164.44 -418.21,115.17 -531.03,-51.99l0 177.52c0,15.88 -12.88,28.73 -28.73,28.73 -15.88,0 -28.72,-12.88 -28.72,-28.73l0 -369.29 0 -0.83c0.45,-190.01 154.63,-343.91 344.71,-343.91l0.01 -0.01zm105.88 238.86c-94.04,-94.08 -255.57,-27.14 -255.57,105.88 0,132.98 161.53,199.96 255.57,105.88 58.45,-58.48 58.48,-153.28 0,-211.73l0 -0.04z" />
             </Scale>
         </svg>
     )

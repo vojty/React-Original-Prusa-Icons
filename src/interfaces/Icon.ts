@@ -17,4 +17,6 @@ export default interface Icon {
     backgroundColor?: Color,
     backgroundRounded?: boolean,
     backgroundRadius?: number,
+
+    withPadding?: boolean,
 }

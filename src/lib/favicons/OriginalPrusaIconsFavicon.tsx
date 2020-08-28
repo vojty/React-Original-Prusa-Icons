@@ -44,7 +44,7 @@ const OriginalPrusaIconsFavicon = (props: IProps) => {
                 setBgColor(Color.BLACK)
                 break
         }
-    }, [props.theme]) // eslint-disable-line
+    }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (
         <svg id="svg" xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 62.38 62.38" fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision">

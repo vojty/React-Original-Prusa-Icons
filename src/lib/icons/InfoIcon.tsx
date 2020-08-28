@@ -1,7 +1,6 @@
 import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../../config'
 import React, { useEffect, useState } from 'react'
 
-import { BackgroundSwitcher } from 'src/components/helpers/backgroundSwitcher'
 import IconDetail from '../../interfaces/Icon'
 import { Scale } from 'src/components/helpers/scale'
 import { ThemeSwitcher } from 'src/components/helpers/themeSwitcher'
@@ -14,23 +13,20 @@ interface IProps extends IconDetail {
 const viewBox: number = 235.3
 
 const InfoIcon = (props: IProps) => {
-    const [viewBoxStart, setViewBoxStart] = useState<number>(0)
-    const [viewBoxEnd, setViewBoxEnd] = useState<number>(viewBox)
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
     const [secondaryColor, setSecondaryColor] = useState<String | Color | undefined>(props.secondaryColor)
     const [backgroundColor, setBackgroundColor] = useState<String | Color | undefined>(props.backgroundColor)
 
     useEffect(() => {
         ThemeSwitcher(props.theme, setPrimaryColor, setSecondaryColor, setBackgroundColor)
-        BackgroundSwitcher(props.withBackground, viewBoxStart, setViewBoxStart, viewBoxEnd, setViewBoxEnd)
-    }, [props.theme]) // eslint-disable-line
+    }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${viewBoxStart} ${viewBoxStart} ${viewBoxEnd} ${viewBoxEnd}`}>
-            {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBoxEnd} height={viewBoxEnd} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-            <Scale withBackground={props.withBackground}>
-                <path fill={primaryColor?.toString()} d="M117.65 33.09c-46.7,0 -84.56,37.86 -84.56,84.56 0,46.7 37.86,84.56 84.56,84.56 46.7,0 84.56,-37.86 84.56,-84.56 0,-46.7 -37.86,-84.56 -84.56,-84.56zm0 14.1c38.84,0 70.46,31.62 70.46,70.46 0,38.84 -31.62,70.46 -70.46,70.46 -38.84,0 -70.46,-31.62 -70.46,-70.46 0,-38.84 31.62,-70.46 70.46,-70.46z" />
-                <path fill={secondaryColor?.toString()} d="M99.17 100.89l0 14.09 14.07 0 0 42.26 14.09 0 0 -56.35 -28.17 0zm29.93 -21.12c0,4.86 -3.95,8.81 -8.81,8.81 -4.86,0 -8.81,-3.95 -8.81,-8.81 0,-4.86 3.95,-8.81 8.81,-8.81 4.86,0 8.81,3.95 8.81,8.81z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${0} ${0} ${viewBox} ${viewBox}`}>
+            {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBox} height={viewBox} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
+            <Scale withPadding={props.withPadding} width={props.width} height={props.height} viewBox={viewBox}>
+                <path fill={primaryColor?.toString()} d="M117.65 0c-64.97,0 -117.65,52.68 -117.65,117.65 0,64.97 52.68,117.65 117.65,117.65 64.97,0 117.65,-52.68 117.65,-117.65 0,-64.97 -52.68,-117.65 -117.65,-117.65zm0 19.61c54.04,0 98.03,43.99 98.03,98.03 0,54.04 -43.99,98.03 -98.03,98.03 -54.04,0 -98.03,-43.99 -98.03,-98.03 0,-54.04 43.99,-98.03 98.03,-98.03z" />
+                <path fill={secondaryColor?.toString()} d="M91.94 94.33l0 19.61 19.58 0 0 58.8 19.61 0 0 -78.4 -39.19 0zm41.64 -29.38c0,6.76 -5.49,12.26 -12.26,12.26 -6.76,0 -12.26,-5.49 -12.26,-12.26 0,-6.76 5.49,-12.26 12.26,-12.26 6.76,0 12.26,5.49 12.26,12.26z" />
             </Scale>
         </svg>
     )
