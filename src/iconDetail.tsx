@@ -1,12 +1,12 @@
 import { Button, ButtonGroup, Form } from 'react-bootstrap'
-import { DefaultSize, Folder, Folders, Sizes, Tags, Theme } from './config'
+import { DefaultSize, DefaultTheme, DefaultWithBackground, DefaultWithPadding, Folder, Folders, Sizes, Tags, Theme } from './config'
 import React, { ComponentType, Suspense, useRef, useState } from 'react'
 
 import Icon from './interfaces/Icon'
 import JSZip from 'jszip'
 import Pace from 'react-pace-progress'
 import Tag from './components/helpers/tag'
-import bg from 'src/img/bg.png'
+import bg from './img/bg.png'
 import download from 'downloadjs'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
@@ -54,9 +54,9 @@ const IconDetail: React.FC<{}> = () => {
 
     const [size, setSize] = useState<number>(DefaultSize)
 
-    const [withBackground, setWithBackground] = useState<boolean>(false)
-    const [withPadding, setWithPadding] = useState<boolean>(false)
-    const [theme, setTheme] = useState<Theme>(Theme.LIGHT)
+    const [withBackground, setWithBackground] = useState<boolean>(DefaultWithBackground)
+    const [withPadding, setWithPadding] = useState<boolean>(DefaultWithPadding)
+    const [theme, setTheme] = useState<Theme>(DefaultTheme)
 
     const { folder, componentName } = useParams()
     const IconCompoment = React.lazy<ComponentType<Icon>>(() => import(`./lib${folder ? ('/' + folder) : ''}/${componentName}`).then(component => {

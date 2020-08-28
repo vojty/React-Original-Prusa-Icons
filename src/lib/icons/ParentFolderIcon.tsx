@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
 import { Scale } from 'src/components/helpers/scale'
+import { Svg } from 'src/components/helpers/svg'
 import { ThemeSwitcher } from 'src/components/helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
@@ -22,12 +23,11 @@ const ParentFolderIcon = (props: IProps) => {
     }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${0} ${0} ${viewBox} ${viewBox}`}>
-            {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBox} height={viewBox} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-            <Scale withPadding={props.withPadding} width={props.width} height={props.height} viewBox={viewBox}>
+        <Svg viewBox={viewBox} width={props.width} height={props.height} withPadding={props.withPadding}>
+            <Scale viewBox={viewBox} backgroundColor={backgroundColor} withPadding={props.withPadding} withBackground={props.withBackground} backgroundRounded={props.backgroundRounded} backgroundRadius={props.backgroundRadius} width={props.width} height={props.height}>
                 <path fill={primaryColor?.toString()} d="M3883.17 3230.3L2447.49 3230.3 2447.49 1794.6 3344.79 1794.6 1729.62 0 114.45 1794.6 1011.79 1794.6 1011.79 3997.6 3883.17 3997.6z" />
             </Scale>
-        </svg>
+        </Svg>
     )
 }
 

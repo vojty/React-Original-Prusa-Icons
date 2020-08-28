@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
 import { Scale } from 'src/components/helpers/scale'
+import { Svg } from 'src/components/helpers/svg'
 import { ThemeSwitcher } from 'src/components/helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
@@ -22,13 +23,12 @@ const StopIcon = (props: IProps) => {
     }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${0} ${0} ${viewBox} ${viewBox}`}>
-            {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBox} height={viewBox} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-            <Scale withPadding={props.withPadding} width={props.width} height={props.height} viewBox={viewBox}>
+        <Svg viewBox={viewBox} width={props.width} height={props.height} withPadding={props.withPadding}>
+            <Scale viewBox={viewBox} backgroundColor={backgroundColor} withPadding={props.withPadding} withBackground={props.withBackground} backgroundRounded={props.backgroundRounded} backgroundRadius={props.backgroundRadius} width={props.width} height={props.height}>
                 <path fill={primaryColor?.toString()} d="M285.7 0c-157.78,0 -285.7,127.93 -285.7,285.7 0,157.78 127.93,285.7 285.7,285.7 157.78,0 285.7,-127.93 285.7,-285.7 0,-157.78 -127.92,-285.7 -285.7,-285.7zm0 47.63c131.23,0 238.07,106.84 238.07,238.07 0,131.23 -106.84,238.07 -238.07,238.07 -131.23,0 -238.07,-106.84 -238.07,-238.07 0,-131.23 106.84,-238.07 238.07,-238.07z" />
                 <path fill={secondaryColor?.toString()} d="M166.67 166.66L404.75 166.66 404.75 404.73 166.67 404.73z" />
             </Scale>
-        </svg>
+        </Svg>
     )
 }
 

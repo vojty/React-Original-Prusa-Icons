@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
 import { Scale } from '../../components/helpers/scale'
+import { Svg } from 'src/components/helpers/svg'
 import { ThemeSwitcher } from '../../components/helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
@@ -22,13 +23,12 @@ const PreheatIcon = (props: IProps) => {
     }, [props.theme, props.withBackground]) // eslint-disable-line
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fillRule="evenodd" clipRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" viewBox={`${0} ${0} ${viewBox} ${viewBox}`}>
-            {props.withBackground && <rect fill={backgroundColor?.toString()} width={viewBox} height={viewBox} rx={props.backgroundRounded ? props.backgroundRadius : 0} ry={props.backgroundRounded ? props.backgroundRadius : 0} />}
-            <Scale withPadding={props.withPadding} width={props.width} height={props.height} viewBox={viewBox}>
-                <path fill={secondaryColor?.toString()} d="M294.23 629.35c-43.53,-42.97 -49.04,-68.32 -11.02,-117.36 13.23,-17.08 19.29,-34.16 19.29,-50.69 0,-34.71 -25.35,-68.87 -58.41,-108.55l-52.34 49.59c49.59,57.86 45.19,63.92 9.37,114.61 -11.57,16.53 -15.98,32.51 -15.98,49.04 0,41.88 31.41,81.55 60.06,111.3l49.59 -47.94 -0.55 0zm313.51 0c-43.53,-42.97 -49.04,-68.32 -11.02,-117.36 13.22,-17.08 19.29,-34.16 19.29,-50.69 0,-34.71 -25.35,-68.87 -58.4,-108.55l-52.34 49.59c49.59,57.86 45.18,63.92 9.36,114.61 -11.57,16.53 -15.98,32.51 -15.98,49.04 0,41.88 31.41,81.55 60.06,111.3l49.59 -47.94 -0.55 0zm-158.69 0c-43.53,-42.97 -49.04,-68.32 -11.02,-117.36 13.22,-17.08 19.29,-34.16 19.29,-50.69 0,-34.71 -25.35,-68.87 -58.41,-108.55l-52.34 49.59c49.59,57.86 45.18,63.92 9.37,114.61 -11.57,16.53 -15.98,32.51 -15.98,49.04 0,41.88 31.41,81.55 60.06,111.3l49.59 -47.94 -0.55 0z" />
-                <path fill={primaryColor?.toString()} fillRule="nonzero" d="M580.63 -0l0 135.21 -117.5 152.96 -97.15 0 -117.48 -152.96 0 -135.21 73.5 0 0 110.27 79.44 104.37 25.59 0 80.08 -104.37 0 -110.27 73.52 0zm-458.3 723.47l555.41 0 0 76.58 -555.41 0 0 -76.58z" />
+        <Svg viewBox={viewBox} width={props.width} height={props.height} withPadding={props.withPadding}>
+            <Scale viewBox={viewBox} backgroundColor={backgroundColor} withPadding={props.withPadding} withBackground={props.withBackground} backgroundRounded={props.backgroundRounded} backgroundRadius={props.backgroundRadius} width={props.width} height={props.height}>
+                <path fill={secondaryColor?.toString()} d="M302.7 611.01c-40.05,-39.54 -45.12,-62.86 -10.14,-107.97 12.17,-15.71 17.75,-31.43 17.75,-46.63 0,-31.94 -23.32,-63.37 -53.74,-99.87l-48.15 45.62c45.62,53.23 41.57,58.8 8.62,105.44 -10.64,15.21 -14.7,29.91 -14.7,45.12 0,38.53 28.89,75.02 55.26,102.4l45.62 -44.1 -0.5 0zm288.43 0c-40.05,-39.54 -45.12,-62.86 -10.14,-107.97 12.16,-15.71 17.74,-31.43 17.74,-46.63 0,-31.94 -23.32,-63.37 -53.73,-99.87l-48.15 45.62c45.62,53.23 41.57,58.8 8.62,105.44 -10.64,15.21 -14.7,29.91 -14.7,45.12 0,38.53 28.89,75.02 55.25,102.4l45.63 -44.1 -0.51 0zm-145.99 0c-40.05,-39.54 -45.12,-62.86 -10.14,-107.97 12.16,-15.71 17.74,-31.43 17.74,-46.63 0,-31.94 -23.32,-63.37 -53.74,-99.87l-48.15 45.62c45.62,53.23 41.57,58.8 8.62,105.44 -10.64,15.21 -14.7,29.91 -14.7,45.12 0,38.53 28.89,75.02 55.25,102.4l45.63 -44.1 -0.51 0z" />
+                <path fill={primaryColor?.toString()} d="M566.18 32l0 124.4 -108.1 140.72 -89.37 0 -108.08 -140.72 0 -124.4 67.62 0 0 101.45 73.08 96.03 23.55 0 73.67 -96.03 0 -101.45 67.64 0zm-421.64 665.59l510.97 0 0 70.46 -510.97 0 0 -70.46z" />
             </Scale>
-        </svg>
+        </Svg>
     )
 }
 

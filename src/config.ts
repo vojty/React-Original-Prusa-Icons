@@ -1,11 +1,5 @@
 export const Sizes = [12, 16, 24, 32, 48, 64, 72, 96, 120, 240]
 
-export const DefaultSize: number = 120
-
-export const DefaultRadiusRatio: number = 0.07
-
-export const DefaultPaddingRatio: number = -0.15
-
 export enum Color {
     TRANSPARENT = 'none',
     WHITE = '#ffffff',
@@ -26,8 +20,6 @@ export enum Theme {
     MONOCHROME,
 }
 
-export const DefaultTheme: Theme = Theme.LIGHT
-
 export enum Folder {
     ICONS = 'icons',
     FAVICONS = 'favicons',
@@ -35,8 +27,6 @@ export enum Folder {
     SPINNERS = 'spinners',
     MISC = 'misc',
 }
-
-export const DefaultFolder: Folder = Folder.ICONS
 
 export interface Folders extends Array<Folder> { }
 
@@ -58,3 +48,11 @@ export enum Tag {
 }
 
 export interface Tags extends Array<Tag> { }
+
+export const DefaultSize: number = 64
+export const DefaultRadiusRatio: number = 0.07
+export const DefaultPaddingRatio: number = 0.28
+export const DefaultWithBackground: boolean = false
+export const DefaultWithPadding: boolean = true
+export const DefaultTheme: Theme = Theme.LIGHT
+export const DefaultFolder: Folder = Folder.ICONS
