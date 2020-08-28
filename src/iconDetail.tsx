@@ -43,10 +43,6 @@ const H2 = styled.h2`
     margin-top: 1rem;
 `
 
-const FormLabelDisabled = styled(Form.Label)`
-    color: #6c757d;
-`
-
 const IconDetail: React.FC<{}> = () => {
 
     const [name, setName] = useState<string>('')
@@ -228,8 +224,8 @@ const IconDetail: React.FC<{}> = () => {
 
                 <H2>
                     <Form.Group controlId="withPadding">
-                        {!withBackground ? <FormLabelDisabled>Padding</FormLabelDisabled> : <Form.Label>Padding</Form.Label>}
-                        <Form.Check checked={withPadding} onChange={withPaddingChange} label={withPadding ? 'on' : 'off'} type="switch" disabled={!withBackground} />
+                        <Form.Label>Padding</Form.Label>
+                        <Form.Check checked={withPadding} onChange={withPaddingChange} label={withPadding ? 'on' : 'off'} type="switch" />
                     </Form.Group>
                 </H2>
 
