@@ -37,6 +37,7 @@
     "gh-pages": "^2.2.0",
     "jszip": "^3.5.0",
     "n-readlines": "^1.0.0",
+    "optipng-js": "^0.1.2",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-pace-progress": "^2.0.0",
     "react-router": "^5.2.0",
