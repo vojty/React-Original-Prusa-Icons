@@ -53,6 +53,6 @@ export const DefaultSize: number = 64
 export const DefaultRadiusRatio: number = 0.07
 export const DefaultPaddingRatio: number = 0.28
 export const DefaultWithBackground: boolean = false
-export const DefaultWithPadding: boolean = true
+export const DefaultWithPadding: boolean = false
 export const DefaultTheme: Theme = Theme.LIGHT
 export const DefaultFolder: Folder = Folder.ICONS
