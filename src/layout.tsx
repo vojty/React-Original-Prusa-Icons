@@ -21,7 +21,7 @@ const Layout: React.FC<{}> = () => {
                 <Menu setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
                 <div className="content">
                     <Switch>
-                        <Route exact path="/React-Original-Prusa-Icons">
+                        <Route exact path="/React-Original-Prusa-Icons" basename={process.env.PUBLIC_URL}>
                             <IconsBrowser searchTerm={searchTerm} />
                         </Route>
                         <Route path={`/React-Original-Prusa-Icons/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
