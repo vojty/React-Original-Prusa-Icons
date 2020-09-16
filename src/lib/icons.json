@@ -1,9 +1,58 @@
 {
   "files": [
     {
+      "file": "ArrowDownIcon.tsx",
+      "name": "Arrow down icon",
+      "description": "Arrow down icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ArrowLeftIcon.tsx",
+      "name": "Arrow left icon",
+      "description": "Arrow left icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ArrowRightIcon.tsx",
+      "name": "Arrow right icon",
+      "description": "Arrow right icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ArrowUpIcon.tsx",
+      "name": "Arrow up icon",
+      "description": "Arrow up icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
       "file": "CalibrateIcon.tsx",
       "name": "Calibrate icon",
       "description": "Calibrate icon for FDM printers.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
+      "file": "CycleIcon.tsx",
+      "name": "Cycle icon",
+      "description": "Icon for cyclic change of value.",
       "tags": [
         "ICONS",
         "MINI"
@@ -90,9 +139,27 @@
       ]
     },
     {
+      "file": "NokIcon.tsx",
+      "name": "Not OK icon",
+      "description": "Not OK icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
       "file": "NozzleIcon.tsx",
       "name": "Nozzle icon",
       "description": "FDM or FFF nozzle with extruded filament.",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
+      "file": "OkIcon.tsx",
+      "name": "OK icon",
+      "description": "OK icon for all types of printers.",
       "tags": [
         "ICONS",
         "MINI"
@@ -169,6 +236,36 @@
       "file": "StopIcon.tsx",
       "name": "Stop icon",
       "description": "Universal Stop icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "SwitchOffIcon.tsx",
+      "name": "Switch off icon",
+      "description": "Switch icon at off state for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "SwitchOnIcon.tsx",
+      "name": "Switch on icon",
+      "description": "Switch icon at on state for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "WarningIcon.tsx",
+      "name": "Warning icon",
+      "description": "Warning icon for all types of printers.",
       "tags": [
         "ICONS",
         "MINI",
