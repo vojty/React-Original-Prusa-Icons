@@ -157,6 +157,15 @@
       ]
     },
     {
+      "file": "NozzleSimpleIcon.tsx",
+      "name": "Nozzle simple icon",
+      "description": "Nozzle icon for Live adjust Z caibration. ",
+      "tags": [
+        "ICONS",
+        "MINI"
+      ]
+    },
+    {
       "file": "OkIcon.tsx",
       "name": "OK icon",
       "description": "OK icon for all types of printers.",
@@ -208,6 +217,26 @@
       "file": "SettingsIcon.tsx",
       "name": "Settings icon",
       "description": "Universal settings icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "SmallArrowDownIcon.tsx",
+      "name": "Small arrow down icon",
+      "description": "Small arrow down icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "SmallArrowUpIcon.tsx",
+      "name": "Small arrow up icon",
+      "description": "Small arrow up icon for all types of printers.",
       "tags": [
         "ICONS",
         "MINI",
