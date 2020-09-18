@@ -55,7 +55,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "git rev-list --count master > tmp && set /p REACT_APP_BUILD_NUMBER=<tmp && del tmp && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:types": "tsc --emitDeclarationOnly --declaration true --declarationDir dist --declarationMap true",
