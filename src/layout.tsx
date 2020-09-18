@@ -4,7 +4,7 @@ import './css/main.css'
 import React, { useState } from 'react'
 import {
     Route,
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch
 } from 'react-router-dom'
 
@@ -21,10 +21,10 @@ const Layout: React.FC<{}> = () => {
                 <Menu setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
                 <div className="content">
                     <Switch>
-                        <Route exact path="/React-Original-Prusa-Icons" basename={process.env.PUBLIC_URL}>
+                        <Route exact path="/" basename={process.env.PUBLIC_URL}>
                             <IconsBrowser searchTerm={searchTerm} />
                         </Route>
-                        <Route path={`/React-Original-Prusa-Icons/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
+                        <Route basename={process.env.PUBLIC_URL} path={`/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
                     </Switch>
                 </div>
             </div>

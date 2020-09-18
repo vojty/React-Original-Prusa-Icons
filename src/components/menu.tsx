@@ -41,7 +41,7 @@ const Menu: React.FC<IProps> = (props) => {
 
     const menuItemsRight =
         <>
-            {location.pathname === '/React-Original-Prusa-Icons' && <Form inline>
+            {location.pathname === '/' && <Form inline>
                 <img src={search} className="search" alt="Search" />
                 <FormControl value={props.searchTerm} onChange={searchTermChange} type="text" placeholder="Search" className="ml-sm-2 mr-sm-2" />
             </Form>}
@@ -52,7 +52,7 @@ const Menu: React.FC<IProps> = (props) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav activeKey={3} className="flex-even d-flex justify-content-start">
-                    <LinkContainer to="/React-Original-Prusa-Icons" >
+                    <LinkContainer to="/" >
                         <Nav.Link className="no-line">
                             <img src={home} className="home" alt="Home" />
                         </Nav.Link>
@@ -60,7 +60,7 @@ const Menu: React.FC<IProps> = (props) => {
                     {/* {menuItemsLeft} */}
                 </Nav>
                 <Navbar.Brand className="flex-even d-flex justify-content-center">
-                    <LinkContainer to="/React-Original-Prusa-Icons" >
+                    <LinkContainer to="/" >
                         <LogoLink className="no-line">
                             <img src={logo} className="logo" alt="Original Prusa Icons Set" />
                         </LogoLink>
