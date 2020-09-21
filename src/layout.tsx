@@ -24,7 +24,7 @@ const Layout: React.FC<{}> = () => {
                         <Route exact path="/" basename={process.env.PUBLIC_URL}>
                             <IconsBrowser searchTerm={searchTerm} />
                         </Route>
-                        <Route basename={process.env.PUBLIC_URL} path={`/icon/:componentName/:folder?`} render={routeProps => <IconDetail {...routeProps} />} />
+                        <Route basename={process.env.PUBLIC_URL} path={`/icon/:componentName/:folder?/:iconSize?/:iconTheme?`} render={routeProps => <IconDetail {...routeProps} />} />
                     </Switch>
                 </div>
             </div>

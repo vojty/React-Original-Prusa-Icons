@@ -1,5 +1,5 @@
 import { Button, ButtonGroup, Form } from 'react-bootstrap'
-import { DefaultSize, DefaultTheme, DefaultWithBackground, DefaultWithPadding, Folder, Folders, Sizes, Tags, Theme } from './config'
+import { DefaultSize, DefaultTheme, DefaultWithBackground, DefaultWithPadding, Folder, Folders, Sizes, Tags, Theme, parseTheme } from './config'
 import React, { ComponentType, Suspense, useRef, useState } from 'react'
 
 import Icon from './interfaces/Icon'
@@ -44,21 +44,21 @@ const H2 = styled.h2`
 `
 
 const IconDetail: React.FC<{}> = () => {
+    const { folder, componentName, iconSize, iconTheme } = useParams()
 
     const [name, setName] = useState<string>('')
     const [description, setDescription] = useState<string>('')
     const [tags, setTags] = useState<Tags>([])
 
-    const [width, setWidth] = useState<number>(DefaultSize)
-    const [height, setHeight] = useState<number>(DefaultSize)
+    const [width, setWidth] = useState<number>(iconSize ? parseInt(iconSize) : DefaultSize)
+    const [height, setHeight] = useState<number>(iconSize ? parseInt(iconSize) : DefaultSize)
 
-    const [size, setSize] = useState<number>(DefaultSize)
+    const [size, setSize] = useState<number>(iconSize ? parseInt(iconSize) : DefaultSize)
 
     const [withBackground, setWithBackground] = useState<boolean>(DefaultWithBackground)
     const [withPadding, setWithPadding] = useState<boolean>(DefaultWithPadding)
-    const [theme, setTheme] = useState<Theme>(DefaultTheme)
+    const [theme, setTheme] = useState<Theme>(iconTheme ? parseTheme(iconTheme) : DefaultTheme)
 
-    const { folder, componentName } = useParams()
     const IconCompoment = React.lazy<ComponentType<Icon>>(() => import(`./lib${folder ? ('/' + folder) : ''}/${componentName}`).then(component => {
 
         setName(component.default.defaultProps.name)

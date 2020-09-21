@@ -20,6 +20,21 @@ export enum Theme {
     MONOCHROME,
 }
 
+export const parseTheme = (theme: string): Theme => {
+    switch (theme.toUpperCase()) {
+        case 'LIGHT':
+            return Theme.LIGHT
+        case 'DARK':
+            return Theme.DARK
+        case 'GRAYSCALE':
+            return Theme.GRAYSCALE
+        case 'MONOCHROME':
+            return Theme.MONOCHROME
+        default:
+            return DefaultTheme
+    }
+}
+
 export enum Folder {
     ICONS = 'icons',
     FAVICONS = 'favicons',
