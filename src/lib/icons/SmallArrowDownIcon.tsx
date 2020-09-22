@@ -4,22 +4,20 @@ import React, { useEffect, useState } from 'react'
 import IconDetail from '../../interfaces/Icon'
 import { Scale } from 'src/components/helpers/scale'
 import { Svg } from 'src/components/helpers/svg'
-import { ThemeSwitcher } from 'src/components/helpers/themeSwitcher'
+import { ThemeSwitcherMonoColor } from 'src/components/helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
     primaryColor?: string | Color,
-    secondaryColor?: string | Color,
 }
 
 const viewBox: number = 571.36
 
 const SmallArrowDownIcon = (props: IProps) => {
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
-    const [secondaryColor, setSecondaryColor] = useState<String | Color | undefined>(props.secondaryColor) // eslint-disable-line
     const [backgroundColor, setBackgroundColor] = useState<String | Color | undefined>(props.backgroundColor)
 
     useEffect(() => {
-        ThemeSwitcher(props.theme, setPrimaryColor, setSecondaryColor, setBackgroundColor)
+        ThemeSwitcherMonoColor(props.theme, setPrimaryColor, setBackgroundColor)
     }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (
@@ -47,7 +45,6 @@ SmallArrowDownIcon.defaultProps = {
     theme: Theme.LIGHT,
 
     primaryColor: Color.ORANGE,
-    secondaryColor: Color.TRANSPARENT,
 
     withBackground: true,
     backgroundColor: Color.WHITE,

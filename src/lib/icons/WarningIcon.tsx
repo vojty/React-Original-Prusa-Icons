@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import IconDetail from '../../interfaces/Icon'
 import { Scale } from 'src/components/helpers/scale'
 import { Svg } from 'src/components/helpers/svg'
-import { ThemeSwitcher } from 'src/components/helpers/themeSwitcher'
+import { ThemeSwitcherDuoColor } from 'src/components/helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
     primaryColor?: string | Color,
@@ -15,11 +15,11 @@ const viewBox: number = 307.7
 
 const WarningIcon = (props: IProps) => {
     const [primaryColor, setPrimaryColor] = useState<String | Color | undefined>(props.primaryColor)
-    const [secondaryColor, setSecondaryColor] = useState<String | Color | undefined>(props.secondaryColor) // eslint-disable-line
+    const [secondaryColor, setSecondaryColor] = useState<String | Color | undefined>(props.secondaryColor)
     const [backgroundColor, setBackgroundColor] = useState<String | Color | undefined>(props.backgroundColor)
 
     useEffect(() => {
-        ThemeSwitcher(props.theme, setPrimaryColor, setSecondaryColor, setBackgroundColor)
+        ThemeSwitcherDuoColor(props.theme, setPrimaryColor, setSecondaryColor, setBackgroundColor)
     }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (
