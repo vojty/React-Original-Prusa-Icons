@@ -1,4 +1,4 @@
-export const Sizes = [12, 16, 24, 32, 48, 64, 72, 96, 120, 240]
+export const Sizes = [12, 16, 24, 32, 48, 58, 64, 72, 96, 120, 240]
 
 export enum Color {
     TRANSPARENT = 'none',
