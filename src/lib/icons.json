@@ -1,324 +1,130 @@
 {
   "files": [
     {
-      "file": "ArrowDownIcon.tsx",
-      "name": "Arrow down icon",
-      "description": "Arrow down icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "ArrowDownIcon.tsx"
     },
     {
-      "file": "ArrowLeftIcon.tsx",
-      "name": "Arrow left icon",
-      "description": "Arrow left icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "ArrowLeftIcon.tsx"
     },
     {
-      "file": "ArrowRightIcon.tsx",
-      "name": "Arrow right icon",
-      "description": "Arrow right icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "ArrowRightIcon.tsx"
     },
     {
-      "file": "ArrowUpIcon.tsx",
-      "name": "Arrow up icon",
-      "description": "Arrow up icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "ArrowUpIcon.tsx"
     },
     {
-      "file": "CalibrateIcon.tsx",
-      "name": "Calibrate icon",
-      "description": "Calibrate icon for FDM printers.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "CalibrateIcon.tsx"
     },
     {
-      "file": "CycleIcon.tsx",
-      "name": "Cycle icon",
-      "description": "Icon for cyclic change of value.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "CycleIcon.tsx"
     },
     {
-      "file": "FolderIcon.tsx",
-      "name": "Folder icon",
-      "description": "Universal Folder icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "FolderIcon.tsx"
     },
     {
-      "file": "FolderOpenedIcon.tsx",
-      "name": "Folder opened icon",
-      "description": "Universal opened Folder icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "FolderOpenedIcon.tsx"
     },
     {
-      "file": "FolderSimple.tsx",
-      "name": "Folder simple icon",
-      "description": "Universal simple Folder icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "FolderSimple.tsx"
     },
     {
-      "file": "HeatedBedIcon.tsx",
-      "name": "Heated Bed icon",
-      "description": "Heated Bed icon for FDM printers.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "HeatedBedIcon.tsx"
     },
     {
-      "file": "HomeIcon.tsx",
-      "name": "Home icon",
-      "description": "Universal Home icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "HomeIcon.tsx"
     },
     {
-      "file": "HomeSimpleIcon.tsx",
-      "name": "Home simple icon",
-      "description": "Universal simple Home icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1",
-        "OUTLINE"
-      ]
+      "file": "HomeSimpleIcon.tsx"
     },
     {
-      "file": "InfoIcon.tsx",
-      "name": "Info icon",
-      "description": "Universal Info icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "InfoIcon.tsx"
     },
     {
-      "file": "LanIcon.tsx",
-      "name": "LAN icon",
-      "description": "Universal LAN icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "LanIcon.tsx"
     },
     {
-      "file": "NokIcon.tsx",
-      "name": "Not OK icon",
-      "description": "Not OK icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "MessageIcon.tsx"
     },
     {
-      "file": "NozzleIcon.tsx",
-      "name": "Nozzle icon",
-      "description": "FDM or FFF nozzle with extruded filament.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "NokIcon.tsx"
     },
     {
-      "file": "NozzleSimpleIcon.tsx",
-      "name": "Nozzle simple icon",
-      "description": "Nozzle icon for Live adjust Z caibration. ",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "NozzleIcon.tsx"
     },
     {
-      "file": "OkIcon.tsx",
-      "name": "OK icon",
-      "description": "OK icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "NozzleSimpleIcon.tsx"
     },
     {
-      "file": "ParentFolderIcon.tsx",
-      "name": "Parent folder icon",
-      "description": "Universal Parent folder icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "OkIcon.tsx"
     },
     {
-      "file": "PauseIcon.tsx",
-      "name": "Pause icon",
-      "description": "Universal pause icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "ParentFolderIcon.tsx"
     },
     {
-      "file": "PreheatIcon.tsx",
-      "name": "Preheat icon",
-      "description": "Preheating nozzle and heated bed.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "PauseIcon.tsx"
     },
     {
-      "file": "PrintIcon.tsx",
-      "name": "Print icon",
-      "description": "Universal print (play) icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "PreheatIcon.tsx"
     },
     {
-      "file": "SettingsIcon.tsx",
-      "name": "Settings icon",
-      "description": "Universal settings icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "PrintIcon.tsx"
     },
     {
-      "file": "SmallArrowDownIcon.tsx",
-      "name": "Small arrow down icon",
-      "description": "Small arrow down icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "ProgressIcon.tsx"
     },
     {
-      "file": "SmallArrowUpIcon.tsx",
-      "name": "Small arrow up icon",
-      "description": "Small arrow up icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "QualityHighIcon.tsx"
     },
     {
-      "file": "SpeedIcon.tsx",
-      "name": "Speed icon",
-      "description": "Speed icon for FDM printers.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "QualityLowIcon.tsx"
     },
     {
-      "file": "SpoolIcon.tsx",
-      "name": "Spool icon",
-      "description": "Filament spool icon.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "QualityMediumIcon.tsx"
     },
     {
-      "file": "StopIcon.tsx",
-      "name": "Stop icon",
-      "description": "Universal Stop icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "SettingsIcon.tsx"
     },
     {
-      "file": "SwitchOffIcon.tsx",
-      "name": "Switch off icon",
-      "description": "Switch icon at off state for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "SmallArrowDownIcon.tsx"
     },
     {
-      "file": "SwitchOnIcon.tsx",
-      "name": "Switch on icon",
-      "description": "Switch icon at on state for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "SmallArrowUpIcon.tsx"
     },
     {
-      "file": "WarningIcon.tsx",
-      "name": "Warning icon",
-      "description": "Warning icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "SpeedIcon.tsx"
     },
     {
-      "file": "WifiIcon.tsx",
-      "name": "Wifi icon",
-      "description": "Universal Wifi icon for all types of printers.",
-      "tags": [
-        "ICONS",
-        "MINI",
-        "SL1"
-      ]
+      "file": "SpoolIcon.tsx"
     },
     {
-      "file": "ZaxisIcon.tsx",
-      "name": "Z axis icon",
-      "description": "Z axis icon for FDM printers.",
-      "tags": [
-        "ICONS",
-        "MINI"
-      ]
+      "file": "StopIcon.tsx"
+    },
+    {
+      "file": "SwitchOffIcon.tsx"
+    },
+    {
+      "file": "SwitchOnIcon.tsx"
+    },
+    {
+      "file": "TemperatureIcon.tsx"
+    },
+    {
+      "file": "TimeIcon.tsx"
+    },
+    {
+      "file": "UsbFlashDriveIcon.tsx"
+    },
+    {
+      "file": "WaitIcon.tsx"
+    },
+    {
+      "file": "WarningIcon.tsx"
+    },
+    {
+      "file": "WifiIcon.tsx"
+    },
+    {
+      "file": "ZaxisIcon.tsx"
     },
     {
       "file": ""
