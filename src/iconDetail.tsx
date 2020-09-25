@@ -38,7 +38,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
     font-family: 'Atlas Grotesk Black';
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     margin-top: 1rem;
 `
