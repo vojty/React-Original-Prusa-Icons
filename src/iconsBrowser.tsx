@@ -1,7 +1,7 @@
 import { Container, Row } from 'react-bootstrap'
 
 import { files as Favicons } from './lib/favicons.json'
-import { Folder } from './config'
+import { Folder } from './lib/config'
 import IconBrowserItem from './iconsBrowserItem'
 import { files as Icons } from './lib/icons.json'
 import React from 'react'

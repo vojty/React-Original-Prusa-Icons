@@ -1,7 +1,7 @@
 {
   "name": "react-original-prusa-icons",
   "homepage": "https://michalxfanta.github.io/React-Original-Prusa-Icons",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -20,7 +20,7 @@
     "@babel/preset-typescript": "^7.10.1",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-image": "^2.0.5",
-    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^8.4.0",
     "@rollup/plugin-typescript": "^4.1.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

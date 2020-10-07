@@ -1,4 +1,4 @@
-import { Color, DefaultPaddingRatio } from 'src/config'
+import { Color, DefaultPaddingRatio } from 'src/lib/config'
 
 import React from 'react'
 

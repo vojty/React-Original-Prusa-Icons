@@ -1,5 +1,5 @@
 import { Button, ButtonGroup, Form } from 'react-bootstrap'
-import { DefaultSize, DefaultTheme, DefaultWithBackground, DefaultWithPadding, Folder, Folders, Sizes, Tags, Theme, parseTheme } from './config'
+import { DefaultSize, DefaultTheme, DefaultWithBackground, DefaultWithPadding, Folder, Folders, Sizes, Tags, Theme, parseTheme } from './lib/config'
 import React, { ComponentType, Suspense, useRef, useState } from 'react'
 
 import Icon from './interfaces/Icon'

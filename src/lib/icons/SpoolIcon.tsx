@@ -1,10 +1,10 @@
-import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../../config'
+import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../config'
 import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
-import { Scale } from 'src/components/helpers/scale'
-import { Svg } from 'src/components/helpers/svg'
-import { ThemeSwitcherDuoColor } from '../../components/helpers/themeSwitcher'
+import { Scale } from '../helpers/scale'
+import { Svg } from '../helpers/svg'
+import { ThemeSwitcherDuoColor } from '../helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
     primaryColor?: string | Color,

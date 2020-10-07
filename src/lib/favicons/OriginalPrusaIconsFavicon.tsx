@@ -1,4 +1,4 @@
-import { Color, Folder, Tag, Theme } from '../../config'
+import { Color, Folder, Tag, Theme } from '../config'
 import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'

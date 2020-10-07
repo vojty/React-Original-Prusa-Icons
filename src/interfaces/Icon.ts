@@ -1,4 +1,4 @@
-import { Color, Folder, Tags, Theme } from '../config'
+import { Color, Folder, Tags, Theme } from '../lib/config'
 
 export default interface Icon {
     name?: string,

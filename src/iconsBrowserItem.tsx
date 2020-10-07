@@ -1,4 +1,4 @@
-import { Color, Folder, Theme } from './config'
+import { Color, Folder, Theme } from './lib/config'
 import React, { ComponentType, Suspense } from 'react'
 
 import { Col } from 'react-bootstrap'
@@ -59,7 +59,7 @@ interface IProps {
     files: any,
     folder: Folder,
 }
-    
+
 const IconsBrowserItem: React.FC<IProps> = (props) => {
     return (
 

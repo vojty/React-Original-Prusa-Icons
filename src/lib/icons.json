@@ -1,6 +1,15 @@
 {
   "files": [
     {
+      "file": "AdminIcon.tsx",
+      "name": "Admin icon",
+      "description": "Wrench icon for entering to administration area.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "ArrowDownIcon.tsx",
       "name": "Arrow down icon",
       "description": "Arrow down icon for all types of printers.",
@@ -41,12 +50,78 @@
       ]
     },
     {
+      "file": "BackIcon.tsx",
+      "name": "Back icon",
+      "description": "Back navigation icon.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "BackSimpleIcon.tsx",
+      "name": "Back simple icon",
+      "description": "Back navigation icon.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "BrightnessIcon.tsx",
+      "name": "Brightness icon",
+      "description": "Icon for brightness settings.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "CalibrateIcon.tsx",
       "name": "Calibrate icon",
       "description": "Calibrate icon for FDM printers.",
       "tags": [
         "ICONS",
         "MINI"
+      ]
+    },
+    {
+      "file": "CalibrationVerticalIcon.tsx",
+      "name": "Calibration Vertical icon",
+      "description": "Icon for vertical calibration.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "CancelIcon.tsx",
+      "name": "Cancel Icon",
+      "description": "Universal cancel icon.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ControlIcon.tsx",
+      "name": "Control Icon",
+      "description": "Icon for control printer movement.",
+      "tags": [
+        "ICONS",
+        "SL1",
+        "CONNECT"
+      ]
+    },
+    {
+      "file": "CoverIcon.tsx",
+      "name": "Cover Icon",
+      "description": "Icon with SLA printer cover.",
+      "tags": [
+        "ICONS",
+        "SL1"
       ]
     },
     {
@@ -59,9 +134,127 @@
       ]
     },
     {
+      "file": "DisableSteppersIcon.tsx",
+      "name": "Disable Steppers Icon",
+      "description": "Icon for disabling stepper motors.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "DisplayReplacement.tsx",
+      "name": "Display Replacement Icon",
+      "description": "Display Replacement icon for SLA printers",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "DownloadIcon.tsx",
       "name": "Download icon",
       "description": "Icon for downloading files from internet.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "EditIcon.tsx",
+      "name": "Edit Icon",
+      "description": "Icon for edit action.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ErrorIcon.tsx",
+      "name": "Error Icon",
+      "description": "Icon for error event.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "EstimatedEndIcon.tsx",
+      "name": "Estimated End Icon",
+      "description": "Icon for estimated end of print.",
+      "tags": [
+        "ICONS",
+        "SL1",
+        "CONNECT"
+      ]
+    },
+    {
+      "file": "ExportIcon.tsx",
+      "name": "Export Icon",
+      "description": "Universal export icon",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ExposureTimes.tsx",
+      "name": "Exposure Times Icon",
+      "description": "Icon for exposure times settings for SLA printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FactoryReset.tsx",
+      "name": "Factory Reset Icon",
+      "description": "Icon for reseting printer to factory defaults.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FanIcon.tsx",
+      "name": "Fan Icon",
+      "description": "Icon for fan settings.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FastBackwardIcon.tsx",
+      "name": "Fast Backward Icon",
+      "description": "Icon for fast backward movements.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FastDownIcon.tsx",
+      "name": "Fast Down Icon",
+      "description": "Icon for fast down movements.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FastForwardIcon.tsx",
+      "name": "Fast Forward Icon",
+      "description": "Icon for fast forward movements.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "FastUpIcon.tsx",
+      "name": "Fast Up Icon",
+      "description": "Icon for fast up movements.",
       "tags": [
         "ICONS",
         "SL1"
@@ -107,6 +300,15 @@
       ]
     },
     {
+      "file": "FrequencyIcon.tsx",
+      "name": "Frequency Icon",
+      "description": "Icon for frequency settings for SLA printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "HeatedBedIcon.tsx",
       "name": "Heated Bed icon",
       "description": "Heated Bed icon for FDM printers.",
@@ -126,6 +328,24 @@
       ]
     },
     {
+      "file": "HomePlatform.tsx",
+      "name": "Home Platform Icon",
+      "description": "Icon for homing print platform for SLA printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "HomeResinTank.tsx",
+      "name": "Home Resin Tank Icon",
+      "description": "Icon for homing resin tank for SLA printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "HomeSimpleIcon.tsx",
       "name": "Home simple icon",
       "description": "Universal simple Home icon for all types of printers.",
@@ -134,6 +354,33 @@
         "MINI",
         "SL1",
         "OUTLINE"
+      ]
+    },
+    {
+      "file": "HostnameIcon.tsx",
+      "name": "Hostname Icon",
+      "description": "Network identification name.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "HotspotIcon.tsx",
+      "name": "Hotspot Icon",
+      "description": "Setting up an access point in the printer.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ImportIcon.tsx",
+      "name": "Import Icon",
+      "description": "Universal import icon",
+      "tags": [
+        "ICONS",
+        "SL1"
       ]
     },
     {
@@ -166,9 +413,56 @@
       ]
     },
     {
+      "file": "LedSetReplacementIcon.tsx",
+      "name": "Led Set Replacement Icon",
+      "description": "Led set replacement icon for SLA printers",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "LiveAdjustZArrowDownIcon.tsx",
+      "name": "Live Adjust Z Arrow Down",
+      "description": "Small arrow for adjusting nozzle at Z axis.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "LiveAdjustZArrowUpIcon.tsx",
+      "name": "Live Adjust Z Arrow Up",
+      "description": "Small arrow for adjusting nozzle at Z axis.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "LockIcon.tsx",
+      "name": "Lock Icon",
+      "description": "Universal lock icon.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "LogsIcon.tsx",
       "name": "Logs icon",
       "description": "Icon event logs for all types of printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ManualIcon.tsx",
+      "name": "Manual Icon",
+      "description": "Icon for instructions and guides.",
       "tags": [
         "ICONS",
         "SL1"
@@ -185,9 +479,36 @@
       ]
     },
     {
+      "file": "MinusIcon.tsx",
+      "name": "Minus Sign Icon",
+      "description": "Minus sign icon for decreasing numeric value.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "MoveTopIcon.tsx",
+      "name": "Move Top Icon",
+      "description": "Icon for homimg at top position.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "NetworkIcon.tsx",
       "name": "Network icon",
       "description": "Icon for network settings for all types of printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "NextIcon.tsx",
+      "name": "Next Icon",
+      "description": "Icon for forward navigation.",
       "tags": [
         "ICONS",
         "SL1"
@@ -200,6 +521,16 @@
       "tags": [
         "ICONS",
         "MINI"
+      ]
+    },
+    {
+      "file": "NoWifiIcon.tsx",
+      "name": "No Wifi icon",
+      "description": "Universal No Wifi connection icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
       ]
     },
     {
@@ -250,9 +581,27 @@
       ]
     },
     {
+      "file": "PlatformSensitivityIcon.tsx",
+      "name": "Platform Sesitivity icon",
+      "description": "Platform sesitivity icon for SLA printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "PlatformTankIcon.tsx",
       "name": "Platform and Tank icon",
       "description": "Platform and Tank icon for SLA printers.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "PlusSignIcon.tsx",
+      "name": "Plus Sign Icon",
+      "description": "Plus sign icon for increasing numeric value.",
       "tags": [
         "ICONS",
         "SL1"
@@ -268,9 +617,37 @@
       ]
     },
     {
+      "file": "PreviousIcon.tsx",
+      "name": "Previous Icon",
+      "description": "Icon for backward navigation.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "PrintIcon.tsx",
       "name": "Print icon",
       "description": "Universal print (play) icon for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "PrintingTime.tsx",
+      "name": "Printing Time Icon",
+      "description": "Elapsed printing time icon.",
+      "tags": [
+        "ICONS",
+        "CONNECT"
+      ]
+    },
+    {
+      "file": "ProgressBarIcon.tsx",
+      "name": "Progress Bar icon",
+      "description": "Progress bar icon for all types of printers.",
       "tags": [
         "ICONS",
         "MINI",
@@ -315,6 +692,34 @@
         "ICONS",
         "MINI",
         "SL1"
+      ]
+    },
+    {
+      "file": "QuestionmarkIcon.tsx",
+      "name": "Questionmark Icon",
+      "description": "Universal questionmark icon.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "RefreshFolderIcon.tsx",
+      "name": "Refresh Folder icon",
+      "description": "Icon for updating content of folder for all types of printers.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
+      "file": "RemainingTimeIcon.tsx",
+      "name": "Remaining Time Icon",
+      "description": "Remaining printing time icon.",
+      "tags": [
+        "ICONS",
+        "CONNECT"
       ]
     },
     {

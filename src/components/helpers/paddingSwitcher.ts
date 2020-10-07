@@ -1,4 +1,4 @@
-import { DefaultPaddingRatio } from '../../config'
+import { DefaultPaddingRatio } from '../../lib/config'
 
 export const PaddingSwitcher = (
     withPadding: boolean | undefined,

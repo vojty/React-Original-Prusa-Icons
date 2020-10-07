@@ -1,4 +1,4 @@
-import { DefaultPaddingRatio } from '../../config'
+import { DefaultPaddingRatio } from '../../lib/config'
 import React from 'react'
 
 interface IProps {

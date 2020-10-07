@@ -1,10 +1,10 @@
-import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../../config'
+import { Color, DefaultRadiusRatio, Folder, Tag, Theme } from '../config'
 import React, { useEffect, useState } from 'react'
 
 import IconDetail from '../../interfaces/Icon'
-import { Scale } from 'src/components/helpers/scale'
-import { Svg } from 'src/components/helpers/svg'
-import { ThemeSwitcherMonoColor } from 'src/components/helpers/themeSwitcher'
+import { Scale } from '../helpers/scale'
+import { Svg } from '../helpers/svg'
+import { ThemeSwitcherMonoColor } from '../helpers/themeSwitcher'
 
 interface IProps extends IconDetail {
     primaryColor?: string | Color,
@@ -17,7 +17,7 @@ const FolderOpenedIcon = (props: IProps) => {
     const [backgroundColor, setBackgroundColor] = useState<String | Color | undefined>(props.backgroundColor)
 
     useEffect(() => {
-        ThemeSwitcherMonoColor(props.theme, setPrimaryColor,  setBackgroundColor)
+        ThemeSwitcherMonoColor(props.theme, setPrimaryColor, setBackgroundColor)
     }, [props.theme, props.withBackground, props.withPadding]) // eslint-disable-line
 
     return (

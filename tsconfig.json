@@ -22,7 +22,8 @@
     "noEmit": true
   },
   "include": [
-    "src/lib/**/*"
+    "src/lib/**/*",
+    "src/components/helpers"
   ],
   "exclude": [
     "node_modules",

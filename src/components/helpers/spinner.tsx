@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 import React from 'react'
-import { Theme } from '../../config'
+import { Theme } from '../../lib/config'
 
 interface IProps {
     size?: string,

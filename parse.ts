@@ -1,19 +1,22 @@
 const fs = require('fs')
 const lineByLine = require('n-readlines')
 
-const folders = ['icons' , 'favicons', 'logos', 'spinners', 'misc']
+const folders = ['icons', 'favicons', 'logos', 'spinners', 'misc']
 
+let items = ''
+    
 for (let folder in folders) {
     let content = JSON.parse(fs.readFileSync(`./src/lib/${folders[folder]}.json`, 'utf8'))
-
 
     content.files.filter(component => !!component.file).forEach(component => {
         const liner = new lineByLine(`./src/lib/${folders[folder]}/${component.file}`)
 
+        items += `export { default as ${component.file.replace(`.tsx`, ``)} } from './${folders[folder]}/${component.file.replace(`.tsx`, ``)}'\n`
+
         let line
 
         while (line = liner.next()) {
-            
+
             if (line.toString('utf8').trimStart().startsWith('name:')) {
                 const nameJSON = JSON.parse(
                     `{
@@ -60,10 +63,11 @@ for (let folder in folders) {
                     if (item.file === component.file) item.tags = tagsJSON.tags
                 })
             }
-            
+
         }
     })
 
     fs.writeFileSync(`./src/lib/${folders[folder]}.json`, JSON.stringify(content, null, 2))
 }
 
+fs.writeFileSync(`./src/lib/index.ts`, items.toString())
