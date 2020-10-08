@@ -58,7 +58,7 @@ export const ThemeSwitcherMonoInverseColor = (
             setBackgroundColor(Color.WHITE)
             break
         case Theme.GRAYSCALE:
-            setPrimaryColor(Color.WHITE)
+            setPrimaryColor(Color.GRAY)
             setBackgroundColor(Color.GRAY)
             break
         case Theme.MONOCHROME:
