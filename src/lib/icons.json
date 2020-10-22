@@ -134,6 +134,15 @@
       ]
     },
     {
+      "file": "DeleteIcon.tsx",
+      "name": "Delete icon",
+      "description": "Trash icon for delete action.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
       "file": "DisableSteppersIcon.tsx",
       "name": "Disable Steppers Icon",
       "description": "Icon for disabling stepper motors.",
@@ -488,6 +497,16 @@
       ]
     },
     {
+      "file": "MoveIcon.tsx",
+      "name": "Move icon",
+      "description": "Move icon for Drag&Drop operations.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
+      ]
+    },
+    {
       "file": "MoveTopIcon.tsx",
       "name": "Move Top Icon",
       "description": "Icon for homimg at top position.",
@@ -720,6 +739,34 @@
       "tags": [
         "ICONS",
         "CONNECT"
+      ]
+    },
+    {
+      "file": "RemoteControlIcon.tsx",
+      "name": "Remote Control icon",
+      "description": "Icon for printer remote control.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "RestartIcon.tsx",
+      "name": "Restart icon",
+      "description": "Icon for printer restart action.",
+      "tags": [
+        "ICONS",
+        "SL1"
+      ]
+    },
+    {
+      "file": "ScanMeArrow.tsx",
+      "name": "Scan Me Arrow icon",
+      "description": "Hand drawn arrow used with QR codes.",
+      "tags": [
+        "ICONS",
+        "MINI",
+        "SL1"
       ]
     },
     {
