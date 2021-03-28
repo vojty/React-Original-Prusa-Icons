@@ -103,6 +103,10 @@ const IconDetail: React.FC<{}> = () => {
         setTheme(Theme.MONOCHROME)
     }
 
+    const setCustomTheme = () => {
+        setTheme(Theme.CUSTOM)
+    }
+
     const downloadZip = () => {
         console.log('downloadZip')
         const zip = new JSZip()
@@ -212,6 +216,8 @@ const IconDetail: React.FC<{}> = () => {
                             <Form.Check checked={theme === Theme.GRAYSCALE} onChange={setGrayscaleTheme} custom inline label="grayscale" type="radio" id="grayscale" />}
                         {isInFolder([Folder.FAVICONS]) &&
                             <Form.Check checked={theme === Theme.MONOCHROME} onChange={setMonochromeTheme} custom inline label="monochrome" type="radio" id="monochrome" />}
+                        {isInFolder([Folder.ICONS]) &&
+                            <Form.Check checked={theme === Theme.CUSTOM} onChange={setCustomTheme} custom inline label="custom" type="radio" id="custom" />}
                     </Form.Group>
                 </Form>
 
