@@ -19,7 +19,7 @@
     "isolatedModules": true,
     "jsx": "react",
     "suppressImplicitAnyIndexErrors": true,
-    "noEmit": true
+    "noEmit": false
   },
   "include": [
     "src/lib/**/*",

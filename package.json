@@ -1,7 +1,7 @@
 {
   "name": "react-original-prusa-icons",
   "homepage": "https://michalxfanta.github.io/React-Original-Prusa-Icons",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -9,8 +9,8 @@
     "dist/*"
   ],
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.13.1 || ^17",
+    "react-dom": "^16.13.1 || ^17"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -88,5 +88,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "dependencies": {}
 }
