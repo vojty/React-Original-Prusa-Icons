@@ -100,3 +100,5 @@ export { default as WifiIcon } from './icons/WifiIcon'
 export { default as ZaxisIcon } from './icons/ZaxisIcon'
 export { default as OriginalPrusaIconsFavicon } from './favicons/OriginalPrusaIconsFavicon'
 export { default as PrusaConnectFavicon } from './favicons/PrusaConnectFavicon'
+
+export * from './config'

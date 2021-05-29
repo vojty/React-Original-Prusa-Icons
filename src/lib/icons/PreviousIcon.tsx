@@ -25,7 +25,7 @@ const PreviousIcon = (props: IProps) => {
     return (
         <Svg viewBox={viewBox} width={props.width} height={props.height} withPadding={props.withPadding}>
             <Scale viewBox={viewBox} backgroundColor={backgroundColor} withPadding={props.withPadding} withBackground={props.withBackground} backgroundRounded={props.backgroundRounded} backgroundRadius={props.backgroundRadius} width={props.width} height={props.height}>
-                <path fill={primaryColor?.toString()} fill-rule="nonzero" d="M181.87 51.14c-116.01,0 -174.48,140.93 -92.37,223 82.11,82.11 223,23.64 223,-92.37 0,-72.16 -58.51,-130.63 -130.63,-130.63zm-73.88 56.74c65.66,-65.66 178.42,-18.9 178.42,73.89 0,92.82 -112.76,139.54 -178.42,73.88 -40.81,-40.81 -40.81,-106.99 0,-147.8l0 0.03z" />
+                <path fill={primaryColor?.toString()} fillRule="nonzero" d="M181.87 51.14c-116.01,0 -174.48,140.93 -92.37,223 82.11,82.11 223,23.64 223,-92.37 0,-72.16 -58.51,-130.63 -130.63,-130.63zm-73.88 56.74c65.66,-65.66 178.42,-18.9 178.42,73.89 0,92.82 -112.76,139.54 -178.42,73.88 -40.81,-40.81 -40.81,-106.99 0,-147.8l0 0.03z" />
                 <path fill={secondaryColor?.toString()} d="M201.91 260.14L220.4 241.69 159.41 181.73 220.4 121.87 201.91 103.39 122.43 181.73z" />
             </Scale>
         </Svg>
